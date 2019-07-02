@@ -53,4 +53,4 @@ At this point Druid and Tranquility should be running so you can test an ingesti
 curl -XPOST -H'Content-Type: application/json' --data-binary @[data.json] http://localhost:8200/v1/post/[hospital]
 ```
 
-You can change the variables in [] to your specific file and database name.
+You can change the variables in [ ] to your specific file and database name.

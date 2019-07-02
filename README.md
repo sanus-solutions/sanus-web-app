@@ -8,13 +8,18 @@ Contains:
 
 ### Druid Installation and Configuration
 
-Clone from Apache
+Download from Apache
 
 ```
-git clone https://github.com/apache/incubator-druid
+https://www-us.apache.org/dist/incubator/druid/0.15.0-incubating/apache-druid-0.15.0-incubating-bin.tar.gz
 ```
 
 #### Install Zookeeper, Tranquility Server, and add Sanus Config files
+
+**Execute the setup.sh script in the setup folder**
+
+Run the setup.sh script and if that doesn't work then follow the steps below
+
 
 Go to the root druid directory and execute
 ```

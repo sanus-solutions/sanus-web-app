@@ -26,4 +26,5 @@ pwd
 ## Cleanup
 rm -rf tranquility-distribution-0.8.3.tgz
 rm -rf zookeeper-3.4.11.tar.gz
-
+cd ..
+rm -rf apache-druid-0.15.0-incubating-bin.tar.gz

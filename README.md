@@ -84,7 +84,7 @@ superset runserver -d
 
 Installation Issues: 
 
-*Error with import maybe_box?
+* Error with import maybe_box?
 
 ```
 pip uninstall pandas

@@ -1,4 +1,5 @@
 #!/bin/bash
+cd ..
 echo "unpacking Druid folder..."
 tar -xzf apache-druid-0.15.0-incubating-bin.tar.gz
 mv apache-druid-0.15.0-incubating druid

@@ -6,6 +6,46 @@ Contains:
 
 ## Druid and Superset Documentation
 
+### Druid Installation and Configuration
+
+Clone from Apache
+
+```
+git clone https://github.com/apache/incubator-druid
+```
+
+#### Install Zookeeper, Tranquility Server, and add Sanus Config files
+
+Go to the root druid directory and execute
+```
+curl https://archive.apache.org/dist/zookeeper/zookeeper-3.4.11/zookeeper-3.4.11.tar.gz -o zookeeper-3.4.11.tar.gz
+tar -xzf zookeeper-3.4.11.tar.gz
+mv zookeeper-3.4.11 zk
+```
+For Tranqulity:
+
+```
+curl http://static.druid.io/tranquility/releases/tranquility-distribution-0.8.3.tgz -o tranquility-distribution-0.8.3.tgz
+tar -xzf tranquility-distribution-0.8.3.tgz
+mv tranquility-distribution-0.8.3 tranquility
+```
+
+Enable Tranquility Server
+
+In your conf/supervise/single-server/micro-quickstart.conf, (or other config files) uncomment the tranquility-server line.
+Stop your bin/supervise command (CTRL-C) and then restart it by again running bin/supervise -c conf/supervise/single-serve
+/micro-quickstart.conf.
+
+
+Add Sanus Config Files
+
+Go to the /superset-backup/ folder in the root of this repository and move the the sanus-index.json file to
+
+```
+/conf/tranquility/sanus-index.json
+```
+*IMPORTANT* You will have to go the micro-quickstart.conf file again to make sure tranquility has the path to the index file.
+
 ### Starting Druid Services
 
 To start Druid firstly go to the root directory and execute 

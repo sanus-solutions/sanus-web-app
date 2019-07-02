@@ -1,0 +1,57 @@
+{
+  "dataSources" : [
+      {
+        "spec" : {
+          "dataSchema" : {
+            "dataSource" : "hospital",
+            "metricsSpec" : [],
+            "parser" : {
+              "type" : "string",
+              "parseSpec" : {
+                "format" : "json",
+                "dimensionsSpec" : {
+                  "dimensions" : [
+                    "type",
+                    "nodeID",
+                    "staffID",
+                    "staff_title",
+                    "unit",
+                    "room_number",
+                    "response_type",
+                    "response_message"
+                  ]
+                },
+                "timestampSpec": {
+                  "column": "time",
+                  "format": "iso"
+                }
+              }
+            },
+            "granularitySpec" : {
+              "type" : "uniform",
+              "segmentGranularity" : "day",
+              "queryGranularity" : "none",
+              "rollup" : false
+            }
+          },
+          "tuningConfig" : {
+            "type" : "realtime",
+            "windowPeriod" : "PT10M",
+            "intermediatePersistPeriod" : "PT10M",
+            "maxRowsInMemory" : "100000"
+          }
+        },
+        "properties" : {
+          "task.partitions" : "1",
+          "task.replicants" : "1"
+        }
+    }
+  ],
+  "properties" : {
+    "zookeeper.connect" : "localhost",
+    "druid.discovery.curator.path" : "/druid/discovery",
+    "druid.selectors.indexing.serviceName" : "druid/overlord",
+    "http.port" : "8200",
+    "http.threads" : "9"
+  }
+}

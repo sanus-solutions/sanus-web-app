@@ -1,0 +1,890 @@
+{
+    "dashboards": [
+        {
+            "__Dashboard__": {
+                "css": "",
+                "position_json": "{\n    \"DASHBOARD_CHART_TYPE-B1g1_mTLFX\": {\n        \"children\": [],\n        \"id\": \"DASHBOARD_CHART_TYPE-B1g1_mTLFX\",\n        \"meta\": {\n            \"chartId\": 19,\n            \"height\": 50,\n            \"sliceName\": \"Weekly Room Traffic\",\n            \"width\": 6\n        },\n        \"type\": \"DASHBOARD_CHART_TYPE\"\n    },\n    \"DASHBOARD_CHART_TYPE-BylcN4p8FX\": {\n        \"children\": [],\n        \"id\": \"DASHBOARD_CHART_TYPE-BylcN4p8FX\",\n        \"meta\": {\n            \"chartId\": 21,\n            \"height\": 50,\n            \"sliceName\": \"Weekly Breaches by Unit\",\n            \"width\": 6\n        },\n        \"type\": \"DASHBOARD_CHART_TYPE\"\n    },\n    \"DASHBOARD_CHART_TYPE-H1ggIqpItX\": {\n        \"children\": [],\n        \"id\": \"DASHBOARD_CHART_TYPE-H1ggIqpItX\",\n        \"meta\": {\n            \"chartId\": 24,\n            \"height\": 36,\n            \"sliceName\": \"Alert Types - Totals\",\n            \"width\": 6\n        },\n        \"type\": \"DASHBOARD_CHART_TYPE\"\n    },\n    \"DASHBOARD_CHART_TYPE-HJgJOFp8FQ\": {\n        \"children\": [],\n        \"id\": \"DASHBOARD_CHART_TYPE-HJgJOFp8FQ\",\n        \"meta\": {\n            \"chartId\": 23,\n            \"height\": 36,\n            \"sliceName\": \"Filter Box for Graph\",\n            \"width\": 3\n        },\n        \"type\": \"DASHBOARD_CHART_TYPE\"\n    },\n    \"DASHBOARD_CHART_TYPE-HkgUt1D4kV\": {\n        \"children\": [],\n        \"id\": \"DASHBOARD_CHART_TYPE-HkgUt1D4kV\",\n        \"meta\": {\n            \"chartId\": 30,\n            \"height\": 31,\n            \"sliceName\": \"Compliance Rate (7 Days)\",\n            \"width\": 4\n        },\n        \"type\": \"DASHBOARD_CHART_TYPE\"\n    },\n    \"DASHBOARD_CHART_TYPE-Hkl1AtTIF7\": {\n        \"children\": [],\n        \"id\": \"DASHBOARD_CHART_TYPE-Hkl1AtTIF7\",\n        \"meta\": {\n            \"chartId\": 13,\n            \"height\": 17,\n            \"sliceName\": \"Events Recorded Trendline (7 Days)\",\n            \"width\": 3\n        },\n        \"type\": \"DASHBOARD_CHART_TYPE\"\n    },\n    \"DASHBOARD_CHART_TYPE-SJlp7laUYQ\": {\n        \"children\": [],\n        \"id\": \"DASHBOARD_CHART_TYPE-SJlp7laUYQ\",\n        \"meta\": {\n            \"chartId\": 17,\n            \"height\": 17,\n            \"sliceName\": \"Breaches (Past Month)\",\n            \"width\": 3\n        },\n        \"type\": \"DASHBOARD_CHART_TYPE\"\n    },\n    \"DASHBOARD_CHART_TYPE-r1etNMP4y4\": {\n        \"children\": [],\n        \"id\": \"DASHBOARD_CHART_TYPE-r1etNMP4y4\",\n        \"meta\": {\n            \"chartId\": 33,\n            \"height\": 31,\n            \"sliceName\": \"Compliance Rate (Monthly)\",\n            \"width\": 4\n        },\n        \"type\": \"DASHBOARD_CHART_TYPE\"\n    },\n    \"DASHBOARD_CHART_TYPE-rJxiNzvEyE\": {\n        \"children\": [],\n        \"id\": \"DASHBOARD_CHART_TYPE-rJxiNzvEyE\",\n        \"meta\": {\n            \"chartId\": 32,\n            \"height\": 30,\n            \"sliceName\": \"Compliance Rate (Quarterly)\",\n            \"width\": 4\n        },\n        \"type\": \"DASHBOARD_CHART_TYPE\"\n    },\n    \"DASHBOARD_COLUMN_TYPE-Bkg1NEYLYX\": {\n        \"children\": [\n            \"DASHBOARD_HEADER_TYPE-SyxOEVY8YQ\"\n        ],\n        \"id\": \"DASHBOARD_COLUMN_TYPE-Bkg1NEYLYX\",\n        \"meta\": {\n            \"background\": \"BACKGROUND_TRANSPARENT\",\n            \"width\": 8\n        },\n        \"type\": \"DASHBOARD_COLUMN_TYPE\"\n    },\n    \"DASHBOARD_COLUMN_TYPE-S1xONqpLKQ\": {\n        \"children\": [\n            \"DASHBOARD_ROW_TYPE-ByeaVqpUYX\",\n            \"DASHBOARD_ROW_TYPE-SyxlS9TLFm\"\n        ],\n        \"id\": \"DASHBOARD_COLUMN_TYPE-S1xONqpLKQ\",\n        \"meta\": {\n            \"background\": \"BACKGROUND_TRANSPARENT\",\n            \"width\": 3\n        },\n        \"type\": \"DASHBOARD_COLUMN_TYPE\"\n    },\n    \"DASHBOARD_COLUMN_TYPE-SJxsqVpItQ\": {\n        \"children\": [\n            \"DASHBOARD_ROW_TYPE-rkqV468YQ\"\n        ],\n        \"id\": \"DASHBOARD_COLUMN_TYPE-SJxsqVpItQ\",\n        \"meta\": {\n            \"background\": \"BACKGROUND_TRANSPARENT\",\n            \"width\": 6\n        },\n        \"type\": \"DASHBOARD_COLUMN_TYPE\"\n    },\n    \"DASHBOARD_COLUMN_TYPE-rygEK4T8t7\": {\n        \"children\": [\n            \"DASHBOARD_ROW_TYPE-SkJd7aLY7\"\n        ],\n        \"id\": \"DASHBOARD_COLUMN_TYPE-rygEK4T8t7\",\n        \"meta\": {\n            \"background\": \"BACKGROUND_TRANSPARENT\",\n            \"width\": 6\n        },\n        \"type\": \"DASHBOARD_COLUMN_TYPE\"\n    },\n    \"DASHBOARD_DIVIDER_TYPE-ByxoBs3LFm\": {\n        \"children\": [],\n        \"id\": \"DASHBOARD_DIVIDER_TYPE-ByxoBs3LFm\",\n        \"meta\": {},\n        \"type\": \"DASHBOARD_DIVIDER_TYPE\"\n    },\n    \"DASHBOARD_GRID_ID\": {\n        \"children\": [\n            \"DASHBOARD_ROW_TYPE-Hkgc74FUYQ\",\n            \"DASHBOARD_ROW_TYPE-By2AzI4YX\",\n            \"DASHBOARD_DIVIDER_TYPE-ByxoBs3LFm\",\n            \"DASHBOARD_ROW_TYPE-rkMJ_FaLK7\",\n            \"DASHBOARD_ROW_TYPE-Skeq_4p8FQ\"\n        ],\n        \"id\": \"DASHBOARD_GRID_ID\",\n        \"type\": \"DASHBOARD_GRID_TYPE\"\n    },\n    \"DASHBOARD_HEADER_ID\": {\n        \"id\": \"DASHBOARD_HEADER_ID\",\n        \"meta\": {\n            \"text\": \"Hospital Data\"\n        },\n        \"type\": \"DASHBOARD_HEADER_TYPE\"\n    },\n    \"DASHBOARD_HEADER_TYPE-SyxOEVY8YQ\": {\n        \"children\": [],\n        \"id\": \"DASHBOARD_HEADER_TYPE-SyxOEVY8YQ\",\n        \"meta\": {\n            \"background\": \"BACKGROUND_TRANSPARENT\",\n            \"headerSize\": \"MEDIUM_HEADER\",\n            \"text\": \"                                    Hand Hygiene Compliance Rates \"\n        },\n        \"type\": \"DASHBOARD_HEADER_TYPE\"\n    },\n    \"DASHBOARD_ROOT_ID\": {\n        \"children\": [\n            \"DASHBOARD_GRID_ID\"\n        ],\n        \"id\": \"DASHBOARD_ROOT_ID\",\n        \"type\": \"DASHBOARD_ROOT_TYPE\"\n    },\n    \"DASHBOARD_ROW_TYPE-By2AzI4YX\": {\n        \"children\": [\n            \"DASHBOARD_CHART_TYPE-HkgUt1D4kV\",\n            \"DASHBOARD_CHART_TYPE-r1etNMP4y4\",\n            \"DASHBOARD_CHART_TYPE-rJxiNzvEyE\"\n        ],\n        \"id\": \"DASHBOARD_ROW_TYPE-By2AzI4YX\",\n        \"meta\": {\n            \"background\": \"BACKGROUND_TRANSPARENT\"\n        },\n        \"type\": \"DASHBOARD_ROW_TYPE\"\n    },\n    \"DASHBOARD_ROW_TYPE-ByeaVqpUYX\": {\n        \"children\": [\n            \"DASHBOARD_CHART_TYPE-Hkl1AtTIF7\"\n        ],\n        \"id\": \"DASHBOARD_ROW_TYPE-ByeaVqpUYX\",\n        \"meta\": {\n            \"background\": \"BACKGROUND_TRANSPARENT\"\n        },\n        \"type\": \"DASHBOARD_ROW_TYPE\"\n    },\n    \"DASHBOARD_ROW_TYPE-Hkgc74FUYQ\": {\n        \"children\": [\n            \"DASHBOARD_COLUMN_TYPE-Bkg1NEYLYX\"\n        ],\n        \"id\": \"DASHBOARD_ROW_TYPE-Hkgc74FUYQ\",\n        \"meta\": {\n            \"background\": \"BACKGROUND_TRANSPARENT\"\n        },\n        \"type\": \"DASHBOARD_ROW_TYPE\"\n    },\n    \"DASHBOARD_ROW_TYPE-SkJd7aLY7\": {\n        \"children\": [\n            \"DASHBOARD_CHART_TYPE-B1g1_mTLFX\"\n        ],\n        \"id\": \"DASHBOARD_ROW_TYPE-SkJd7aLY7\",\n        \"meta\": {\n            \"background\": \"BACKGROUND_TRANSPARENT\"\n        },\n        \"type\": \"DASHBOARD_ROW_TYPE\"\n    },\n    \"DASHBOARD_ROW_TYPE-Skeq_4p8FQ\": {\n        \"children\": [\n            \"DASHBOARD_COLUMN_TYPE-rygEK4T8t7\",\n            \"DASHBOARD_COLUMN_TYPE-SJxsqVpItQ\"\n        ],\n        \"id\": \"DASHBOARD_ROW_TYPE-Skeq_4p8FQ\",\n        \"meta\": {\n            \"background\": \"BACKGROUND_TRANSPARENT\"\n        },\n        \"type\": \"DASHBOARD_ROW_TYPE\"\n    },\n    \"DASHBOARD_ROW_TYPE-SyxlS9TLFm\": {\n        \"children\": [\n            \"DASHBOARD_CHART_TYPE-SJlp7laUYQ\"\n        ],\n        \"id\": \"DASHBOARD_ROW_TYPE-SyxlS9TLFm\",\n        \"meta\": {\n            \"background\": \"BACKGROUND_TRANSPARENT\"\n        },\n        \"type\": \"DASHBOARD_ROW_TYPE\"\n    },\n    \"DASHBOARD_ROW_TYPE-rkMJ_FaLK7\": {\n        \"children\": [\n            \"DASHBOARD_CHART_TYPE-HJgJOFp8FQ\",\n            \"DASHBOARD_COLUMN_TYPE-S1xONqpLKQ\",\n            \"DASHBOARD_CHART_TYPE-H1ggIqpItX\"\n        ],\n        \"id\": \"DASHBOARD_ROW_TYPE-rkMJ_FaLK7\",\n        \"meta\": {\n            \"background\": \"BACKGROUND_TRANSPARENT\"\n        },\n        \"type\": \"DASHBOARD_ROW_TYPE\"\n    },\n    \"DASHBOARD_ROW_TYPE-rkqV468YQ\": {\n        \"children\": [\n            \"DASHBOARD_CHART_TYPE-BylcN4p8FX\"\n        ],\n        \"id\": \"DASHBOARD_ROW_TYPE-rkqV468YQ\",\n        \"meta\": {\n            \"background\": \"BACKGROUND_TRANSPARENT\"\n        },\n        \"type\": \"DASHBOARD_ROW_TYPE\"\n    },\n    \"DASHBOARD_VERSION_KEY\": \"v2\"\n}",
+                "id": 1,
+                "created_on": {
+                    "__datetime__": "2018-09-22T19:38:27"
+                },
+                "created_by_fk": 1,
+                "json_metadata": "{\"filter_immune_slices\": [], \"timed_refresh_immune_slices\": [], \"filter_immune_slice_fields\": {}, \"expanded_slices\": {}, \"default_filters\": \"{}\", \"remote_id\": 1}",
+                "description": null,
+                "dashboard_title": "Hospital Data",
+                "changed_on": {
+                    "__datetime__": "2018-12-04T15:23:43"
+                },
+                "changed_by_fk": 1,
+                "slug": null,
+                "slices": [
+                    {
+                        "__Slice__": {
+                            "datasource_id": 1,
+                            "id": 13,
+                            "created_on": {
+                                "__datetime__": "2018-09-24T12:18:26"
+                            },
+                            "created_by_fk": 1,
+                            "perm": "[luka-druid].[hospital](id:1)",
+                            "description": null,
+                            "viz_type": "big_number",
+                            "datasource_type": "druid",
+                            "slice_name": "Events Recorded Trendline (7 Days)",
+                            "changed_on": {
+                                "__datetime__": "2019-06-26T11:04:17"
+                            },
+                            "changed_by_fk": 1,
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"1__druid\", \"viz_type\": \"big_number\", \"granularity\": \"PT1M\", \"druid_time_origin\": \"now\", \"since\": \"7 days ago\", \"until\": \"1 days from now\", \"metric\": \"count\", \"adhoc_filters\": null, \"compare_lag\": 2, \"y_axis_format\": \".1s\", \"url_params\": {}, \"slice_id\": 13, \"filters\": [], \"remote_id\": 13, \"datasource_name\": \"hospital\", \"schema\": \"hospital\", \"database_name\": \"luka-druid\"}",
+                            "datasource_name": "hospital"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "datasource_id": 1,
+                            "id": 17,
+                            "created_on": {
+                                "__datetime__": "2018-09-24T15:50:59"
+                            },
+                            "created_by_fk": 1,
+                            "perm": "[luka-druid].[hospital](id:1)",
+                            "description": null,
+                            "viz_type": "big_number",
+                            "datasource_type": "druid",
+                            "slice_name": "Non-Compliant Actions (Past Month)",
+                            "changed_on": {
+                                "__datetime__": "2019-06-26T11:04:17"
+                            },
+                            "changed_by_fk": 1,
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"1__druid\", \"viz_type\": \"big_number\", \"granularity\": \"P1D\", \"druid_time_origin\": \"now\", \"since\": \"30 days ago\", \"until\": \"1 days from now\", \"metric\": \"count\", \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"response_message\", \"operator\": \"==\", \"comparator\": \"Alert given\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_4zbsmdvfo6j_0vqic1bkp4g\"}], \"compare_lag\": \"\", \"y_axis_format\": \".1s\", \"url_params\": {}, \"slice_id\": 17, \"where\": \"\", \"having\": \"\", \"having_filters\": [], \"filters\": [{\"col\": \"response_message\", \"op\": \"==\", \"val\": \"'alert given'\"}], \"remote_id\": 17, \"datasource_name\": \"hospital\", \"schema\": \"hospital\", \"database_name\": \"luka-druid\"}",
+                            "datasource_name": "hospital"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "datasource_id": 1,
+                            "id": 19,
+                            "created_on": {
+                                "__datetime__": "2018-09-24T16:04:53"
+                            },
+                            "created_by_fk": 1,
+                            "perm": "[luka-druid].[hospital](id:1)",
+                            "description": null,
+                            "viz_type": "table",
+                            "datasource_type": "druid",
+                            "slice_name": "Weekly Room Traffic",
+                            "changed_on": {
+                                "__datetime__": "2019-06-26T11:04:17"
+                            },
+                            "changed_by_fk": 1,
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"1__druid\", \"viz_type\": \"table\", \"granularity\": \"one day\", \"druid_time_origin\": null, \"since\": \"7 days ago\", \"until\": \"1 days from now\", \"groupby\": [\"room_number\"], \"metrics\": [{\"expressionType\": \"SIMPLE\", \"column\": {\"column_name\": \"response_type\", \"verbose_name\": null, \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"is_dttm\": null, \"type\": \"STRING\", \"optionName\": \"_col_response_type\"}, \"aggregate\": \"COUNT\", \"sqlExpression\": null, \"hasCustomLabel\": true, \"fromFormData\": true, \"label\": \"Entries Per Room\", \"optionName\": \"metric_klmy9cxter_ipcczi2ou3h\"}], \"percent_metrics\": [], \"timeseries_limit_metric\": \"count\", \"row_limit\": 10000, \"include_time\": false, \"order_desc\": true, \"all_columns\": [], \"order_by_cols\": [], \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"response_type\", \"operator\": \"==\", \"comparator\": \"Entry\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_q9ud446yyu_oqmjj5wm0s\"}], \"table_timestamp_format\": \"%Y-%m-%d %H:%M:%S\", \"page_length\": 0, \"include_search\": true, \"table_filter\": false, \"align_pn\": false, \"color_pn\": true, \"url_params\": {}, \"slice_id\": 19, \"where\": \"\", \"having\": \"\", \"having_filters\": [], \"filters\": [{\"col\": \"response_type\", \"op\": \"==\", \"val\": \"'entry'\"}, {\"col\": \"unit\", \"op\": \"in\", \"val\": [\"ICU\"]}, {\"col\": \"room_number\", \"op\": \"in\", \"val\": [\"25\"]}, {\"col\": \"staffID\", \"op\": \"in\", \"val\": [\"luka\"]}], \"remote_id\": 19, \"datasource_name\": \"hospital\", \"schema\": \"hospital\", \"database_name\": \"luka-druid\"}",
+                            "datasource_name": "hospital"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "datasource_id": 1,
+                            "id": 21,
+                            "created_on": {
+                                "__datetime__": "2018-09-24T16:08:16"
+                            },
+                            "created_by_fk": 1,
+                            "perm": "[luka-druid].[hospital](id:1)",
+                            "description": null,
+                            "viz_type": "table",
+                            "datasource_type": "druid",
+                            "slice_name": "Weekly Non-Compliant Actions by Unit",
+                            "changed_on": {
+                                "__datetime__": "2019-06-26T11:04:17"
+                            },
+                            "changed_by_fk": 1,
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"1__druid\", \"viz_type\": \"table\", \"granularity\": \"one day\", \"druid_time_origin\": null, \"since\": \"7 days ago\", \"until\": \"1 days from now\", \"groupby\": [\"unit\"], \"metrics\": [{\"expressionType\": \"SIMPLE\", \"column\": {\"column_name\": \"response_message\", \"verbose_name\": null, \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"is_dttm\": null, \"type\": \"STRING\", \"optionName\": \"_col_response_message\"}, \"aggregate\": \"COUNT\", \"sqlExpression\": null, \"hasCustomLabel\": true, \"fromFormData\": true, \"label\": \"Breaches\", \"optionName\": \"metric_72mfpyk2toe_get0m8g2ag9\"}], \"percent_metrics\": [], \"timeseries_limit_metric\": null, \"row_limit\": 10000, \"include_time\": false, \"order_desc\": true, \"all_columns\": [], \"order_by_cols\": [], \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"response_message\", \"operator\": \"==\", \"comparator\": \"Alert given\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_892nk04clkb_z912moz1ezr\"}], \"table_timestamp_format\": \"%Y-%m-%d %H:%M:%S\", \"page_length\": 0, \"include_search\": true, \"table_filter\": false, \"align_pn\": false, \"color_pn\": true, \"url_params\": {}, \"slice_id\": 21, \"where\": \"\", \"having\": \"\", \"having_filters\": [], \"filters\": [{\"col\": \"response_message\", \"op\": \"==\", \"val\": \"Alert given\"}], \"remote_id\": 21, \"datasource_name\": \"hospital\", \"schema\": \"hospital\", \"database_name\": \"luka-druid\"}",
+                            "datasource_name": "hospital"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "datasource_id": 1,
+                            "id": 23,
+                            "created_on": {
+                                "__datetime__": "2018-09-24T16:17:48"
+                            },
+                            "created_by_fk": 1,
+                            "perm": "[luka-druid].[hospital](id:1)",
+                            "description": null,
+                            "viz_type": "filter_box",
+                            "datasource_type": "druid",
+                            "slice_name": "Filter Box for Graph",
+                            "changed_on": {
+                                "__datetime__": "2019-06-26T11:04:17"
+                            },
+                            "changed_by_fk": 1,
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"1__druid\", \"viz_type\": \"filter_box\", \"granularity\": \"one day\", \"druid_time_origin\": \"now\", \"since\": \"1 years ago\", \"until\": \"1 days from now\", \"groupby\": [\"unit\", \"room_number\", \"staffID\"], \"metric\": \"count\", \"adhoc_filters\": null, \"date_filter\": true, \"instant_filtering\": true, \"show_sqla_time_granularity\": false, \"show_sqla_time_column\": false, \"show_druid_time_granularity\": false, \"show_druid_time_origin\": false, \"url_params\": {}, \"slice_id\": 23, \"filters\": [], \"remote_id\": 23, \"datasource_name\": \"hospital\", \"schema\": \"hospital\", \"database_name\": \"luka-druid\"}",
+                            "datasource_name": "hospital"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "datasource_id": 1,
+                            "id": 24,
+                            "created_on": {
+                                "__datetime__": "2018-09-24T16:28:19"
+                            },
+                            "created_by_fk": 1,
+                            "perm": "[luka-druid].[hospital](id:1)",
+                            "description": null,
+                            "viz_type": "dist_bar",
+                            "datasource_type": "druid",
+                            "slice_name": "Alert Types - Totals",
+                            "changed_on": {
+                                "__datetime__": "2019-06-26T11:04:17"
+                            },
+                            "changed_by_fk": 1,
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"1__druid\", \"viz_type\": \"dist_bar\", \"granularity\": \"one day\", \"druid_time_origin\": \"now\", \"since\": \"6 months ago\", \"until\": \"1 days from now\", \"metrics\": [{\"expressionType\": \"SIMPLE\", \"column\": {\"column_name\": \"response_message\", \"verbose_name\": null, \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"is_dttm\": null, \"type\": \"STRING\"}, \"aggregate\": \"COUNT\", \"sqlExpression\": null, \"hasCustomLabel\": false, \"fromFormData\": true, \"label\": \"COUNT(response_message)\", \"optionName\": \"metric_fw0lz1yuufh_mmr9vt0gfw\"}], \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"response_message\", \"operator\": \"!=\", \"comparator\": \"None\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_31yddi4744o_lf8gp6garr\"}], \"groupby\": [\"response_message\"], \"columns\": [], \"row_limit\": 10000, \"contribution\": false, \"color_scheme\": \"d3Category10\", \"show_legend\": false, \"show_bar_value\": true, \"bar_stacked\": false, \"order_bars\": false, \"y_axis_format\": \".3s\", \"y_axis_label\": \"Occurrences\", \"show_controls\": false, \"x_axis_label\": \"Alert Type\", \"bottom_margin\": \"auto\", \"x_ticks_layout\": \"auto\", \"reduce_x_ticks\": false, \"url_params\": {}, \"slice_id\": 24, \"filters\": [{\"col\": \"response_message\", \"op\": \"!=\", \"val\": \"None\"}], \"where\": \"\", \"having\": \"\", \"having_filters\": [], \"remote_id\": 24, \"datasource_name\": \"hospital\", \"schema\": \"hospital\", \"database_name\": \"luka-druid\"}",
+                            "datasource_name": "hospital"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "datasource_id": 31,
+                            "id": 30,
+                            "created_on": {
+                                "__datetime__": "2018-12-04T15:09:42"
+                            },
+                            "created_by_fk": 1,
+                            "perm": "[None].[luka soban-hospital-Compliance Rate (7 Days)-HybYA0UVkV](id:31)",
+                            "description": null,
+                            "viz_type": "big_number_total",
+                            "datasource_type": "table",
+                            "slice_name": "Compliance Rate (7 Days)",
+                            "changed_on": {
+                                "__datetime__": "2019-06-26T11:04:17"
+                            },
+                            "changed_by_fk": 1,
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"31__table\", \"viz_type\": \"big_number_total\", \"granularity_sqla\": null, \"time_grain_sqla\": null, \"since\": \"100 years ago\", \"until\": \"now\", \"metric\": \"sum__Compliance_Rate\", \"adhoc_filters\": null, \"y_axis_format\": \",.1%\", \"limit\": \"0\", \"slice_id\": 30, \"subheader\": \"Overall for Hospital\", \"remote_id\": 30, \"datasource_name\": \"druid.luka soban-hospital-Compliance Rate (7 Days)-HybYA0UVkV\", \"schema\": \"druid.luka soban-hospital-Compliance Rate (7 Days)-HybYA0UVkV\", \"database_name\": \"hospital\"}",
+                            "datasource_name": "druid.luka soban-hospital-Compliance Rate (7 Days)-HybYA0UVkV"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "datasource_id": 33,
+                            "id": 32,
+                            "created_on": {
+                                "__datetime__": "2018-12-04T15:21:02"
+                            },
+                            "created_by_fk": 1,
+                            "perm": "[None].[luka soban-hospital-Compliance_Quarterly-rkbSc-DVyV](id:33)",
+                            "description": null,
+                            "viz_type": "big_number_total",
+                            "datasource_type": "table",
+                            "slice_name": "Compliance Rate (Quarterly)",
+                            "changed_on": {
+                                "__datetime__": "2019-06-26T11:04:17"
+                            },
+                            "changed_by_fk": 1,
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"33__table\", \"viz_type\": \"big_number_total\", \"granularity_sqla\": null, \"time_grain_sqla\": null, \"since\": \"100 years ago\", \"until\": \"now\", \"metrics\": [\"sum__Compliance_Rate\"], \"adhoc_filters\": null, \"groupby\": [], \"columns\": [], \"row_limit\": 10000, \"contribution\": false, \"color_scheme\": \"bnbColors\", \"show_legend\": true, \"show_bar_value\": false, \"bar_stacked\": false, \"order_bars\": false, \"y_axis_format\": \",.1%\", \"y_axis_label\": \"\", \"show_controls\": false, \"x_axis_label\": \"\", \"bottom_margin\": \"auto\", \"x_ticks_layout\": \"auto\", \"reduce_x_ticks\": false, \"limit\": \"0\", \"slice_id\": 32, \"metric\": \"sum__Compliance_Rate\", \"subheader\": \"Overall for Hospital\", \"remote_id\": 32, \"datasource_name\": \"druid.luka soban-hospital-Compliance_Quarterly-rkbSc-DVyV\", \"schema\": \"druid.luka soban-hospital-Compliance_Quarterly-rkbSc-DVyV\", \"database_name\": \"hospital\"}",
+                            "datasource_name": "druid.luka soban-hospital-Compliance_Quarterly-rkbSc-DVyV"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "datasource_id": 34,
+                            "id": 33,
+                            "created_on": {
+                                "__datetime__": "2018-12-04T15:22:36"
+                            },
+                            "created_by_fk": 1,
+                            "perm": "[None].[luka soban-hospital-Compliance_Monthly-SJlRxMw4JE](id:34)",
+                            "description": null,
+                            "viz_type": "big_number_total",
+                            "datasource_type": "table",
+                            "slice_name": "Compliance Rate (Monthly)",
+                            "changed_on": {
+                                "__datetime__": "2019-06-26T11:04:17"
+                            },
+                            "changed_by_fk": 1,
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"34__table\", \"viz_type\": \"big_number_total\", \"granularity_sqla\": null, \"time_grain_sqla\": null, \"since\": \"100 years ago\", \"until\": \"now\", \"metrics\": [\"sum__Compliance_Rate\"], \"adhoc_filters\": null, \"groupby\": [], \"columns\": [], \"row_limit\": 10000, \"contribution\": false, \"color_scheme\": \"bnbColors\", \"show_legend\": true, \"show_bar_value\": false, \"bar_stacked\": false, \"order_bars\": false, \"y_axis_format\": \",.1%\", \"y_axis_label\": \"\", \"show_controls\": false, \"x_axis_label\": \"\", \"bottom_margin\": \"auto\", \"x_ticks_layout\": \"auto\", \"reduce_x_ticks\": false, \"limit\": \"0\", \"slice_id\": 33, \"metric\": \"sum__Compliance_Rate\", \"subheader\": \"Overall for Hospital\", \"remote_id\": 33, \"datasource_name\": \"druid.luka soban-hospital-Compliance_Monthly-SJlRxMw4JE\", \"schema\": \"druid.luka soban-hospital-Compliance_Monthly-SJlRxMw4JE\", \"database_name\": \"hospital\"}",
+                            "datasource_name": "druid.luka soban-hospital-Compliance_Monthly-SJlRxMw4JE"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "datasources": [
+        {
+            "__SqlaTable__": {
+                "is_featured": false,
+                "changed_by_fk": 1,
+                "database_id": 2,
+                "filter_select_enabled": false,
+                "fetch_values_predicate": null,
+                "offset": 0,
+                "user_id": null,
+                "cache_timeout": null,
+                "created_on": {
+                    "__datetime__": "2018-12-04T15:08:54"
+                },
+                "schema": "druid",
+                "params": "{\"remote_id\": 31, \"database_name\": \"hospital\"}",
+                "changed_on": {
+                    "__datetime__": "2018-12-04T15:08:54"
+                },
+                "sql": "SELECT 1.0 * COUNT(response_message) filter (WHERE response_message='No alert' and __time > MILLIS_TO_TIMESTAMP(TIMESTAMP_TO_MILLIS(CURRENT_TIMESTAMP)-604800000))/\r\n       COUNT(type) filter (WHERE type='Entry' and response_message='Not clean' and __time > MILLIS_TO_TIMESTAMP(TIMESTAMP_TO_MILLIS(CURRENT_TIMESTAMP)-604800000)) as Compliance_Rate\r\nFROM hospital",
+                "perm": "[None].[luka soban-hospital-Compliance Rate (7 Days)-HybYA0UVkV](id:31)",
+                "id": 31,
+                "is_sqllab_view": true,
+                "table_name": "luka soban-hospital-Compliance Rate (7 Days)-HybYA0UVkV",
+                "description": null,
+                "template_params": "{}",
+                "main_dttm_col": null,
+                "default_endpoint": null,
+                "created_by_fk": 1,
+                "database": {
+                    "__Database__": {
+                        "allow_run_async": false,
+                        "verbose_name": null,
+                        "created_by_fk": 1,
+                        "allow_ctas": false,
+                        "database_name": "hospital",
+                        "changed_by_fk": 1,
+                        "allow_dml": false,
+                        "sqlalchemy_uri": "druid://localhost:8082/druid/v2/sql/",
+                        "force_ctas_schema": "",
+                        "password": null,
+                        "allow_multi_schema_metadata_fetch": true,
+                        "cache_timeout": null,
+                        "created_on": {
+                            "__datetime__": "2018-09-17T14:38:03"
+                        },
+                        "extra": "{\r\n    \"metadata_params\": {},\r\n    \"engine_params\": {}\r\n}\r\n",
+                        "select_as_create_table_as": false,
+                        "perm": "[hospital].(id:2)",
+                        "changed_on": {
+                            "__datetime__": "2019-06-08T13:39:47"
+                        },
+                        "expose_in_sqllab": true,
+                        "impersonate_user": false,
+                        "id": 2,
+                        "allow_run_sync": true
+                    }
+                },
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "sum": false,
+                            "changed_on": {
+                                "__datetime__": "2018-12-04T15:08:54"
+                            },
+                            "expression": "",
+                            "avg": false,
+                            "id": 100,
+                            "python_date_format": null,
+                            "max": false,
+                            "column_name": "Compliance_Rate",
+                            "database_expression": null,
+                            "min": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "filterable": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "description": null,
+                            "type": "FLOAT",
+                            "table_id": 31,
+                            "groupby": false,
+                            "created_on": {
+                                "__datetime__": "2018-12-04T15:08:54"
+                            },
+                            "is_dttm": false,
+                            "count_distinct": false
+                        }
+                    }
+                ],
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "metric_name": "sum__Compliance_Rate",
+                            "changed_on": {
+                                "__datetime__": "2018-12-04T15:08:54"
+                            },
+                            "changed_by_fk": 1,
+                            "expression": "sum(Compliance_Rate)",
+                            "table_id": 31,
+                            "d3format": null,
+                            "description": null,
+                            "id": 68,
+                            "created_on": {
+                                "__datetime__": "2018-12-04T15:08:54"
+                            },
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "warning_text": null,
+                            "is_restricted": false,
+                            "metric_type": null
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "is_featured": false,
+                "changed_by_fk": 1,
+                "database_id": 2,
+                "filter_select_enabled": false,
+                "fetch_values_predicate": null,
+                "offset": 0,
+                "user_id": null,
+                "cache_timeout": null,
+                "created_on": {
+                    "__datetime__": "2018-12-04T15:22:18"
+                },
+                "schema": "druid",
+                "params": "{\"remote_id\": 34, \"database_name\": \"hospital\"}",
+                "changed_on": {
+                    "__datetime__": "2018-12-04T15:22:18"
+                },
+                "sql": "SELECT 1.0 * COUNT(response_message) filter (WHERE response_message='No alert' and __time > MILLIS_TO_TIMESTAMP(TIMESTAMP_TO_MILLIS(CURRENT_TIMESTAMP)-2592000000))/\n       COUNT(type) filter (WHERE type='Entry' and response_message='Not clean' and __time > MILLIS_TO_TIMESTAMP(TIMESTAMP_TO_MILLIS(CURRENT_TIMESTAMP)-2592000000)) AS Compliance_Rate\nFROM hospital",
+                "perm": "[None].[luka soban-hospital-Compliance_Monthly-SJlRxMw4JE](id:34)",
+                "id": 34,
+                "is_sqllab_view": true,
+                "table_name": "luka soban-hospital-Compliance_Monthly-SJlRxMw4JE",
+                "description": null,
+                "template_params": "{}",
+                "main_dttm_col": null,
+                "default_endpoint": null,
+                "created_by_fk": 1,
+                "database": {
+                    "__Database__": {
+                        "allow_run_async": false,
+                        "verbose_name": null,
+                        "created_by_fk": 1,
+                        "allow_ctas": false,
+                        "database_name": "hospital",
+                        "changed_by_fk": 1,
+                        "allow_dml": false,
+                        "sqlalchemy_uri": "druid://localhost:8082/druid/v2/sql/",
+                        "force_ctas_schema": "",
+                        "password": null,
+                        "allow_multi_schema_metadata_fetch": true,
+                        "cache_timeout": null,
+                        "created_on": {
+                            "__datetime__": "2018-09-17T14:38:03"
+                        },
+                        "extra": "{\r\n    \"metadata_params\": {},\r\n    \"engine_params\": {}\r\n}\r\n",
+                        "select_as_create_table_as": false,
+                        "perm": "[hospital].(id:2)",
+                        "changed_on": {
+                            "__datetime__": "2019-06-08T13:39:47"
+                        },
+                        "expose_in_sqllab": true,
+                        "impersonate_user": false,
+                        "id": 2,
+                        "allow_run_sync": true
+                    }
+                },
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "sum": false,
+                            "changed_on": {
+                                "__datetime__": "2018-12-04T15:22:18"
+                            },
+                            "expression": "",
+                            "avg": false,
+                            "id": 103,
+                            "python_date_format": null,
+                            "max": false,
+                            "column_name": "Compliance_Rate",
+                            "database_expression": null,
+                            "min": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "filterable": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "description": null,
+                            "type": "FLOAT",
+                            "table_id": 34,
+                            "groupby": false,
+                            "created_on": {
+                                "__datetime__": "2018-12-04T15:22:18"
+                            },
+                            "is_dttm": false,
+                            "count_distinct": false
+                        }
+                    }
+                ],
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "metric_name": "sum__Compliance_Rate",
+                            "changed_on": {
+                                "__datetime__": "2018-12-04T15:22:18"
+                            },
+                            "changed_by_fk": 1,
+                            "expression": "sum(Compliance_Rate)",
+                            "table_id": 34,
+                            "d3format": null,
+                            "description": null,
+                            "id": 71,
+                            "created_on": {
+                                "__datetime__": "2018-12-04T15:22:18"
+                            },
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "warning_text": null,
+                            "is_restricted": false,
+                            "metric_type": null
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "is_featured": false,
+                "changed_by_fk": 1,
+                "database_id": 2,
+                "filter_select_enabled": false,
+                "fetch_values_predicate": null,
+                "offset": 0,
+                "user_id": null,
+                "cache_timeout": null,
+                "created_on": {
+                    "__datetime__": "2018-12-04T15:20:31"
+                },
+                "schema": "druid",
+                "params": "{\"remote_id\": 33, \"database_name\": \"hospital\"}",
+                "changed_on": {
+                    "__datetime__": "2018-12-04T15:20:31"
+                },
+                "sql": "SELECT 1.0 * COUNT(response_message) filter (WHERE response_message='No alert' and __time > MILLIS_TO_TIMESTAMP(TIMESTAMP_TO_MILLIS(CURRENT_TIMESTAMP)-10368000000))/\r\n       COUNT(type) filter (WHERE type='Entry' and response_message='Not clean' and __time > MILLIS_TO_TIMESTAMP(TIMESTAMP_TO_MILLIS(CURRENT_TIMESTAMP)-10368000000)) AS Compliance_Rate\r\nFROM hospital",
+                "perm": "[None].[luka soban-hospital-Compliance_Quarterly-rkbSc-DVyV](id:33)",
+                "id": 33,
+                "is_sqllab_view": true,
+                "table_name": "luka soban-hospital-Compliance_Quarterly-rkbSc-DVyV",
+                "description": null,
+                "template_params": "{}",
+                "main_dttm_col": null,
+                "default_endpoint": null,
+                "created_by_fk": 1,
+                "database": {
+                    "__Database__": {
+                        "allow_run_async": false,
+                        "verbose_name": null,
+                        "created_by_fk": 1,
+                        "allow_ctas": false,
+                        "database_name": "hospital",
+                        "changed_by_fk": 1,
+                        "allow_dml": false,
+                        "sqlalchemy_uri": "druid://localhost:8082/druid/v2/sql/",
+                        "force_ctas_schema": "",
+                        "password": null,
+                        "allow_multi_schema_metadata_fetch": true,
+                        "cache_timeout": null,
+                        "created_on": {
+                            "__datetime__": "2018-09-17T14:38:03"
+                        },
+                        "extra": "{\r\n    \"metadata_params\": {},\r\n    \"engine_params\": {}\r\n}\r\n",
+                        "select_as_create_table_as": false,
+                        "perm": "[hospital].(id:2)",
+                        "changed_on": {
+                            "__datetime__": "2019-06-08T13:39:47"
+                        },
+                        "expose_in_sqllab": true,
+                        "impersonate_user": false,
+                        "id": 2,
+                        "allow_run_sync": true
+                    }
+                },
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "sum": false,
+                            "changed_on": {
+                                "__datetime__": "2018-12-04T15:20:31"
+                            },
+                            "expression": "",
+                            "avg": false,
+                            "id": 102,
+                            "python_date_format": null,
+                            "max": false,
+                            "column_name": "Compliance_Rate",
+                            "database_expression": null,
+                            "min": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "filterable": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "description": null,
+                            "type": "FLOAT",
+                            "table_id": 33,
+                            "groupby": false,
+                            "created_on": {
+                                "__datetime__": "2018-12-04T15:20:31"
+                            },
+                            "is_dttm": false,
+                            "count_distinct": false
+                        }
+                    }
+                ],
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "metric_name": "sum__Compliance_Rate",
+                            "changed_on": {
+                                "__datetime__": "2018-12-04T15:20:31"
+                            },
+                            "changed_by_fk": 1,
+                            "expression": "sum(Compliance_Rate)",
+                            "table_id": 33,
+                            "d3format": null,
+                            "description": null,
+                            "id": 70,
+                            "created_on": {
+                                "__datetime__": "2018-12-04T15:20:31"
+                            },
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "warning_text": null,
+                            "is_restricted": false,
+                            "metric_type": null
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "__DruidDatasource__": {
+                "cluster_name": "luka-druid",
+                "offset": 0,
+                "user_id": null,
+                "cache_timeout": null,
+                "created_on": {
+                    "__datetime__": "2018-09-13T13:50:25"
+                },
+                "created_by_fk": 1,
+                "params": "{\"remote_id\": 1, \"database_name\": \"luka-druid\"}",
+                "changed_on": {
+                    "__datetime__": "2018-09-13T13:53:11"
+                },
+                "changed_by_fk": 1,
+                "perm": "[luka-druid].[hospital](id:1)",
+                "id": 1,
+                "datasource_name": "hospital",
+                "description": "",
+                "is_hidden": false,
+                "default_endpoint": "",
+                "filter_select_enabled": true,
+                "is_featured": false,
+                "fetch_values_from": "",
+                "cluster": {
+                    "__DruidCluster__": {
+                        "changed_by_fk": 1,
+                        "cache_timeout": null,
+                        "broker_endpoint": "druid/v2",
+                        "broker_host": "localhost",
+                        "coordinator_port": 8081,
+                        "coordinator_host": "localhost",
+                        "verbose_name": "luka-druid",
+                        "changed_on": {
+                            "__datetime__": "2019-06-14T15:12:05"
+                        },
+                        "created_by_fk": 1,
+                        "metadata_last_refreshed": {
+                            "__datetime__": "2019-06-14T15:12:05"
+                        },
+                        "broker_port": 8082,
+                        "coordinator_endpoint": "druid/coordinator/v1/metadata",
+                        "cluster_name": "luka-druid",
+                        "id": 1,
+                        "created_on": {
+                            "__datetime__": "2018-09-13T13:50:14"
+                        }
+                    }
+                },
+                "metrics": [
+                    {
+                        "__DruidMetric__": {
+                            "created_by_fk": 1,
+                            "datasource_id": 1,
+                            "d3format": null,
+                            "description": null,
+                            "verbose_name": "COUNT(*)",
+                            "metric_name": "count",
+                            "changed_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "changed_by_fk": 1,
+                            "json": "{\"type\": \"count\", \"name\": \"count\"}",
+                            "warning_text": null,
+                            "is_restricted": false,
+                            "metric_type": "count",
+                            "id": 1,
+                            "created_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            }
+                        }
+                    }
+                ],
+                "columns": [
+                    {
+                        "__DruidColumn__": {
+                            "datasource_id": 1,
+                            "groupby": true,
+                            "created_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "dimension_spec_json": null,
+                            "count_distinct": false,
+                            "created_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "sum": false,
+                            "id": 1,
+                            "changed_by_fk": 1,
+                            "avg": false,
+                            "column_name": "nodeID",
+                            "max": false,
+                            "verbose_name": null,
+                            "min": false,
+                            "is_active": true,
+                            "filterable": true,
+                            "type": "STRING",
+                            "description": null
+                        }
+                    },
+                    {
+                        "__DruidColumn__": {
+                            "datasource_id": 1,
+                            "groupby": true,
+                            "created_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "dimension_spec_json": null,
+                            "count_distinct": false,
+                            "created_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "sum": false,
+                            "id": 2,
+                            "changed_by_fk": 1,
+                            "avg": false,
+                            "column_name": "response_message",
+                            "max": false,
+                            "verbose_name": null,
+                            "min": false,
+                            "is_active": true,
+                            "filterable": true,
+                            "type": "STRING",
+                            "description": null
+                        }
+                    },
+                    {
+                        "__DruidColumn__": {
+                            "datasource_id": 1,
+                            "groupby": true,
+                            "created_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "dimension_spec_json": null,
+                            "count_distinct": false,
+                            "created_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "sum": false,
+                            "id": 3,
+                            "changed_by_fk": 1,
+                            "avg": false,
+                            "column_name": "response_type",
+                            "max": false,
+                            "verbose_name": null,
+                            "min": false,
+                            "is_active": true,
+                            "filterable": true,
+                            "type": "STRING",
+                            "description": null
+                        }
+                    },
+                    {
+                        "__DruidColumn__": {
+                            "datasource_id": 1,
+                            "groupby": true,
+                            "created_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "dimension_spec_json": null,
+                            "count_distinct": false,
+                            "created_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "sum": false,
+                            "id": 4,
+                            "changed_by_fk": 1,
+                            "avg": false,
+                            "column_name": "roomNum",
+                            "max": false,
+                            "verbose_name": null,
+                            "min": false,
+                            "is_active": true,
+                            "filterable": true,
+                            "type": "STRING",
+                            "description": null
+                        }
+                    },
+                    {
+                        "__DruidColumn__": {
+                            "datasource_id": 1,
+                            "groupby": true,
+                            "created_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "dimension_spec_json": null,
+                            "count_distinct": false,
+                            "created_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "sum": false,
+                            "id": 5,
+                            "changed_by_fk": 1,
+                            "avg": false,
+                            "column_name": "staffID",
+                            "max": false,
+                            "verbose_name": null,
+                            "min": false,
+                            "is_active": true,
+                            "filterable": true,
+                            "type": "STRING",
+                            "description": null
+                        }
+                    },
+                    {
+                        "__DruidColumn__": {
+                            "datasource_id": 1,
+                            "groupby": true,
+                            "created_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "dimension_spec_json": null,
+                            "count_distinct": false,
+                            "created_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "sum": false,
+                            "id": 6,
+                            "changed_by_fk": 1,
+                            "avg": false,
+                            "column_name": "type",
+                            "max": false,
+                            "verbose_name": null,
+                            "min": false,
+                            "is_active": true,
+                            "filterable": true,
+                            "type": "STRING",
+                            "description": null
+                        }
+                    },
+                    {
+                        "__DruidColumn__": {
+                            "datasource_id": 1,
+                            "groupby": true,
+                            "created_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "dimension_spec_json": null,
+                            "count_distinct": false,
+                            "created_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2018-09-13T13:50:26"
+                            },
+                            "sum": false,
+                            "id": 7,
+                            "changed_by_fk": 1,
+                            "avg": false,
+                            "column_name": "unit",
+                            "max": false,
+                            "verbose_name": null,
+                            "min": false,
+                            "is_active": true,
+                            "filterable": true,
+                            "type": "STRING",
+                            "description": null
+                        }
+                    },
+                    {
+                        "__DruidColumn__": {
+                            "datasource_id": 1,
+                            "groupby": true,
+                            "created_on": {
+                                "__datetime__": "2018-09-13T14:46:37"
+                            },
+                            "dimension_spec_json": null,
+                            "count_distinct": false,
+                            "created_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2018-09-13T14:46:37"
+                            },
+                            "sum": false,
+                            "id": 8,
+                            "changed_by_fk": 1,
+                            "avg": false,
+                            "column_name": "room_number",
+                            "max": false,
+                            "verbose_name": null,
+                            "min": false,
+                            "is_active": true,
+                            "filterable": true,
+                            "type": "STRING",
+                            "description": null
+                        }
+                    },
+                    {
+                        "__DruidColumn__": {
+                            "datasource_id": 1,
+                            "groupby": true,
+                            "created_on": {
+                                "__datetime__": "2018-09-13T14:46:37"
+                            },
+                            "dimension_spec_json": null,
+                            "count_distinct": false,
+                            "created_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2018-09-13T14:46:37"
+                            },
+                            "sum": false,
+                            "id": 9,
+                            "changed_by_fk": 1,
+                            "avg": false,
+                            "column_name": "staff_title",
+                            "max": false,
+                            "verbose_name": null,
+                            "min": false,
+                            "is_active": true,
+                            "filterable": true,
+                            "type": "STRING",
+                            "description": null
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

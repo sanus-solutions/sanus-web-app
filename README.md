@@ -44,7 +44,7 @@ Stop your bin/supervise command (CTRL-C) and then restart it by again running bi
 
 **Add Sanus Config Files**
 
-Go to the /superset-backup/ folder in the root of this repository and move the the sanus-index.json file to
+Go to the /setup folder in the root of this repository and move the the sanus-index.json file to
 
 ```
 /conf/tranquility/sanus-index.json

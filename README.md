@@ -30,14 +30,14 @@ tar -xzf tranquility-distribution-0.8.3.tgz
 mv tranquility-distribution-0.8.3 tranquility
 ```
 
-Enable Tranquility Server
+**Enable Tranquility Server**
 
 In your conf/supervise/single-server/micro-quickstart.conf, (or other config files) uncomment the tranquility-server line.
 Stop your bin/supervise command (CTRL-C) and then restart it by again running bin/supervise -c conf/supervise/single-serve
 /micro-quickstart.conf.
 
 
-Add Sanus Config Files
+**Add Sanus Config Files**
 
 Go to the /superset-backup/ folder in the root of this repository and move the the sanus-index.json file to
 

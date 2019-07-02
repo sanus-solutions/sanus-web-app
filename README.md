@@ -8,6 +8,16 @@ Contains:
 
 ### Druid Installation and Configuration
 
+#### Using the setup.sh script
+Go to the package root and go to the setup folder. Execute:
+```
+cd sanus-web-app/setup
+./setup.sh
+``` 
+If everything unpacks okay skip to the ENABLE TRANQUILTY SECTION
+
+#### Manual Method
+
 Download from Apache
 
 ```

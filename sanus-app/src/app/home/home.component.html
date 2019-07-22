@@ -1,1 +1,40 @@
-<p>home works!</p>
+<mat-toolbar color="primary">
+	<img class="logo" src="assets/logo_white.png" alt="image">
+
+	<button mat-icon-button (click)="drawer.toggle()" aria-label="Menu button for sidenav">
+		<mat-icon>menu</mat-icon>
+	</button>
+
+	<!-- This fills the remaining space of the current row -->
+	<span class="fill-remaining-space"></span>
+
+	<div class="user-profile">
+		<img src="assets/luka.png">
+	</div>
+
+	<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Settings">
+	  <mat-icon>arrow_drop_down</mat-icon>
+	</button>
+	<mat-menu #menu="matMenu">
+	  <button mat-menu-item>
+	    <mat-icon>person</mat-icon>
+	    <span>Edit Profile</span>
+	  </button>
+	  <button mat-menu-item>
+	    <mat-icon>close</mat-icon>
+	    <span>Logout</span>
+	  </button>
+	</mat-menu>
+
+</mat-toolbar>
+<mat-drawer-container class="container" autosize>
+	<mat-drawer #drawer class="sidenav" mode="side">
+		<p>Navigation Buttons will be here</p>
+
+	</mat-drawer>
+
+	<div class="sidenav-content">
+
+	</div>
+
+</mat-drawer-container>

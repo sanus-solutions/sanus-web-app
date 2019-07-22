@@ -8,6 +8,12 @@
 	<!-- This fills the remaining space of the current row -->
 	<span class="fill-remaining-space"></span>
 
+	<button mat-icon-button aria-label="Alerts">
+	  <mat-icon>notifications</mat-icon>
+	</button>
+
+	<div class="padded-right"></div>
+
 	<div class="user-profile">
 		<img src="assets/luka.png">
 	</div>
@@ -29,11 +35,24 @@
 </mat-toolbar>
 <mat-drawer-container class="container" autosize>
 	<mat-drawer #drawer class="sidenav" mode="side">
-		<p>Navigation Buttons will be here</p>
-
+		<mat-list>
+			<h3 mat-subheader>Data and Charts</h3>
+			<mat-list-item>
+				<button mat-icon-button>
+			    	<mat-icon>insert_chart</mat-icon>
+			    	<span>Superset</span>
+			    </button>
+			</mat-list-item>
+			<mat-divider></mat-divider>
+			<h3 mat-subheader>Other Stuff</h3>
+			<mat-divider></mat-divider>
+			<mat-list-item></mat-list-item>
+		</mat-list>
 	</mat-drawer>
 
 	<div class="sidenav-content">
+
+		<!-- All Navigation buttons will change the content here -->
 
 	</div>
 

@@ -26,6 +26,14 @@
 	    <mat-icon>person</mat-icon>
 	    <span>Edit Profile</span>
 	  </button>
+	  <button mat-menu-item routerLink="/login">
+	    <mat-icon>forward</mat-icon>
+	    <span>Login</span>
+	  </button>
+	  <button mat-menu-item routerLink="/register">
+	    <mat-icon>how_to_reg</mat-icon>
+	    <span>Register</span>
+	  </button>
 	  <button mat-menu-item>
 	    <mat-icon>close</mat-icon>
 	    <span>Logout</span>
@@ -53,6 +61,7 @@
 	<div class="sidenav-content">
 
 		<!-- All Navigation buttons will change the content here -->
+		<router-outlet></router-outlet>
 
 	</div>
 

@@ -3,6 +3,7 @@ import {FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validat
 import {ErrorStateMatcher} from '@angular/material/core';
 import { first } from 'rxjs/operators';
 import { Router, ActivatedRoute } from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 import { AuthenticationService } from '../_services'
 
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
     submitted = false;
     returnUrl: string;
     error: string;
+    success: string;
 
 	emailFormControl = new FormControl('', [
 	    Validators.required,
@@ -42,7 +44,8 @@ export class LoginComponent implements OnInit {
           private formBuilder: FormBuilder,
           private route: ActivatedRoute,
           private router: Router,
-          private authenticationService: AuthenticationService
+          private authenticationService: AuthenticationService,
+          private _snackBar: MatSnackBar
     
     ) { 
           // redirect to home if already logged in
@@ -60,6 +63,10 @@ export class LoginComponent implements OnInit {
         // get return url from route parameters or default to '/'
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
 
+        // show success message on registration
+        if (this.route.snapshot.queryParams['registered']) {
+            this.success = 'Registration successful';
+        }
 	}
 
     // convenience getter for easy access to form fields
@@ -67,6 +74,10 @@ export class LoginComponent implements OnInit {
 
     onSubmit() {
         this.submitted = true;
+
+        // reset alerts on submit
+        this.error = null;
+        this.success = null;
 
         // stop here if form is invalid
         if (this.loginForm.invalid) {
@@ -84,6 +95,12 @@ export class LoginComponent implements OnInit {
                     this.error = error;
                     this.loading = false;
                 });
+    }
+
+    openSnackBar(message: string, action: string) {
+        this._snackBar.open(message, action, {
+          duration: 2000,
+        });
     }
 
 }

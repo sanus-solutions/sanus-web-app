@@ -17,10 +17,12 @@ import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 /*                          */
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { LoginComponent } from './login/login.component';
@@ -47,7 +49,9 @@ import { RegisterComponent } from './register/register.component';
     MatCardModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     //provider used to create fake backend

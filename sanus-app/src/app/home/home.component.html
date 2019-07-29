@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" *ngIf="currentUser">
 	<img class="logo" src="assets/logo_white.png" alt="image">
 
 	<button mat-icon-button (click)="drawer.toggle()" aria-label="Menu button for sidenav">

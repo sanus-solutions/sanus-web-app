@@ -5,9 +5,9 @@
 		  <mat-card-title>Login</mat-card-title>
 		  <mat-card-content>
 
-				<form class="login-form">
+				<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
 				  <mat-form-field class="form-full-width">
-				    <input matInput placeholder="Email" [formControl]="emailFormControl"
+				    <input matInput placeholder="Email" formControlName="username" [formControl]="emailFormControl"
 				           [errorStateMatcher]="matcher">
 				    <mat-hint>Please enter email address used to register for the Sanus Solutions System</mat-hint>
 				    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -20,7 +20,7 @@
 
 				  <mat-form-field class="form-full-width">
 				    <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" 
-				    	[formControl]="passwordFormControl" [errorStateMatcher]="matcher">
+				    	[formControl]="passwordFormControl" [errorStateMatcher]="matcher" formControlName="password">
 				    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
 				    <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
 				    </button>
@@ -31,9 +31,11 @@
 
 				</form>
 
+				<mat-spinner *ngIf="loading" class="center-spinner"></mat-spinner>
+
 		  </mat-card-content>
 		  <mat-card-actions>
-		    <button mat-button>LOGIN</button>
+		    <button [disabled]="loading" mat-button>LOGIN</button>
 		    <button mat-button>FORGOT?</button>
 		  </mat-card-actions>
 		</mat-card>

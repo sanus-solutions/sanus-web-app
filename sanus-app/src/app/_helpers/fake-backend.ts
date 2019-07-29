@@ -3,14 +3,11 @@ import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTT
 import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 
-let users = [{ id: 1, firstName: 'Luka', lastName: 'Soban', username: 'test@gmail.com', password: 'test' }];
+let users = [{ id: 1, firstName: 'Jason', lastName: 'Watmore', username: 'test', password: 'test' }];
 
-@Injectable({
-  providedIn: 'root'
-})
-export class FakeBackendService implements HttpInterceptor {
-
-  	intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+@Injectable()
+export class FakeBackendInterceptor implements HttpInterceptor {
+    intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         const { url, method, headers, body } = request;
 
         // wrap in delayed observable to simulate server api call
@@ -60,6 +57,6 @@ export class FakeBackendService implements HttpInterceptor {
 export const fakeBackendProvider = {
     // use fake backend in place of Http service for backend-less development
     provide: HTTP_INTERCEPTORS,
-    useClass: FakeBackendService,
+    useClass: FakeBackendInterceptor,
     multi: true
 };

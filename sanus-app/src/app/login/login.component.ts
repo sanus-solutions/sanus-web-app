@@ -56,8 +56,8 @@ export class LoginComponent implements OnInit {
 
 	ngOnInit() {
         this.loginForm = this.formBuilder.group({
-            username: ['', Validators.required],
-            password: ['', Validators.required]
+            username: this.emailFormControl,
+            password: this.passwordFormControl
         });
 
         // get return url from route parameters or default to '/'
@@ -66,6 +66,8 @@ export class LoginComponent implements OnInit {
         // show success message on registration
         if (this.route.snapshot.queryParams['registered']) {
             this.success = 'Registration successful';
+
+            this.openSnackBar(this.success, 'Dismiss');
         }
 	}
 
@@ -85,7 +87,7 @@ export class LoginComponent implements OnInit {
         }
 
         this.loading = true;
-        this.authenticationService.login(this.f.username.value, this.f.password.value)
+        this.authenticationService.login(this.loginForm.get('username').value, this.loginForm.get('password').value)
             .pipe(first())
             .subscribe(
                 data => {
@@ -99,7 +101,7 @@ export class LoginComponent implements OnInit {
 
     openSnackBar(message: string, action: string) {
         this._snackBar.open(message, action, {
-          duration: 2000,
+          duration: 5000,
         });
     }
 

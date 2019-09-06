@@ -21,7 +21,7 @@ If everything unpacks okay skip to the ENABLE TRANQUILTY SECTION
 Download from Apache
 
 ```
-https://www-us.apache.org/dist/incubator/druid/0.15.0-incubating/apache-druid-0.15.0-incubating-bin.tar.gz
+https://www-us.apache.org/dist/incubator/druid/0.15.1-incubating/apache-druid-0.15.1-incubating-bin.tar.gz
 ```
 
 #### Install Zookeeper, Tranquility Server, and add Sanus Config files
@@ -45,11 +45,11 @@ tar -xzf tranquility-distribution-0.8.3.tgz
 mv tranquility-distribution-0.8.3 tranquility
 ```
 
-**Enable Tranquility Server**
+### Enable Tranquility Server
 
-In your conf/supervise/single-server/micro-quickstart.conf, (or other config files) uncomment the tranquility-server line.
-Stop your bin/supervise command (CTRL-C) and then restart it by again running bin/supervise -c conf/supervise/single-serve
-/micro-quickstart.conf.
+In your 
+```druid/conf/supervise/single-server/micro-quickstart.conf```, uncomment the last line of code in the file.
+From here. change ```/conf/tranquility/wikipedia-index.json``` to ```/conf/tranquility/sanus-index.json```
 
 
 **Add Sanus Config Files**

@@ -1,9 +1,9 @@
 #!/bin/bash
 cd ..
 echo "unpacking Druid folder..."
-curl https://www-us.apache.org/dist/incubator/druid/0.15.0-incubating/apache-druid-0.15.0-incubating-bin.tar.gz -o apache-druid-0.15.0-incubating-bin.tar.gz
-tar -xzf apache-druid-0.15.0-incubating-bin.tar.gz
-mv apache-druid-0.15.0-incubating druid
+curl https://www-us.apache.org/dist/incubator/druid/0.15.1-incubating/apache-druid-0.15.1-incubating-bin.tar.gz -o apache-druid-0.15.1-incubating-bin.tar.gz
+tar -xzf apache-druid-0.15.1-incubating-bin.tar.gz
+mv apache-druid-0.15.1-incubating druid
 cd druid
 
 ## Download Zookeeper to package root
@@ -27,4 +27,4 @@ pwd
 rm -rf tranquility-distribution-0.8.3.tgz
 rm -rf zookeeper-3.4.11.tar.gz
 cd ..
-rm -rf apache-druid-0.15.0-incubating-bin.tar.gz
+rm -rf apache-druid-0.15.1-incubating-bin.tar.gz

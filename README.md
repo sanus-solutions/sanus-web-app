@@ -14,7 +14,7 @@ Go to the package root and go to the setup folder. Execute:
 cd sanus-web-app/setup
 ./setup.sh
 ``` 
-If everything unpacks okay skip to the **ENABLE TRANQUILTY SECTION**
+If everything unpacks okay skip to the **ENABLE TRANQUILTY SERVER** section
 
 #### Manual Method
 

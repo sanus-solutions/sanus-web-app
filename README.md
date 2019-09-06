@@ -14,7 +14,7 @@ Go to the package root and go to the setup folder. Execute:
 cd sanus-web-app/setup
 ./setup.sh
 ``` 
-If everything unpacks okay skip to the ENABLE TRANQUILTY SECTION
+If everything unpacks okay skip to the **ENABLE TRANQUILTY SECTION**
 
 #### Manual Method
 
@@ -54,7 +54,7 @@ From here. change ```/conf/tranquility/wikipedia-index.json``` to ```/conf/tranq
 
 **Add Sanus Config Files**
 
-Go to the /setup folder in the root of this repository and move the the sanus-index.json file to
+Go to the ```sanus-web-app/setup``` folder in the root of this repository and move the the ```sanus-index.json``` file to
 
 ```
 /conf/tranquility/sanus-index.json

@@ -10,11 +10,24 @@
 	display: inline-block;
 }
 
+.overview-graph-card {
+	display: inline-block;
+}
+
+.overview-main-charts {
+	width: 75%;
+	height: 75%;
+}
+
 // .dashboard-overview{
-// 	padding: 50px;
+// 	max-height: none;
 // }
 
 .mat-card-image {
 	max-width: 100px;
 	padding-left: 30px;
+}
+
+.progress-circle {
+	padding-left: 50px;
 }

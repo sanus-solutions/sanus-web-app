@@ -79,6 +79,10 @@ export class LivemapComponent implements OnInit {
     var point1 = new Point(400,400);
     var point2 = new Point(500,400);
     var point3 = new Point(400,500);
+    var point4 = new Point(500,500);
+    var point5 = new Point(600,500);
+    var point6 = new Point(500,600);
+    var point7 = new Point(700,700);
     var roomSize = new Size(100,100);
 
     var path1 = new Path.Rectangle(point1, roomSize);
@@ -92,6 +96,23 @@ export class LivemapComponent implements OnInit {
     var path3 = new Path.Rectangle(point3, roomSize);
     path3.strokeColor = new Color('green');
     path3.fillColor = new Color('white');
+
+    var path4 = new Path.Rectangle(point4, roomSize);
+    path4.strokeColor = new Color('black');
+    path4.fillColor = new Color('white');
+
+    var path5 = new Path.Rectangle(point5, roomSize);
+    path5.strokeColor = new Color('red');
+    path5.fillColor = new Color('white');
+
+    var path6 = new Path.Rectangle(point6, roomSize);
+    path6.strokeColor = new Color('blue');
+    path6.fillColor = new Color('white');
+
+    var path7 = new Path.Rectangle(point7, roomSize);
+    path7.strokeColor = new Color('black');
+    path7.fillColor = new Color('white');
+
   }
 
 }

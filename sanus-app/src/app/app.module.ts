@@ -36,7 +36,8 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';  
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { LivemapComponent } from './livemap/livemap.component';  
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    LivemapComponent
   ],
   imports: [
     BrowserModule,

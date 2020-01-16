@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Color, Project, Path, Point, Layer, Size, Rectangle, Event, Segment, Tool, PointText } from 'paper';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { ApiService } from './../_services/api.service';
 
 import * as paper from 'paper';
 import { Tooltip } from 'chart.js';
@@ -14,11 +15,15 @@ import { defaultColors } from 'ng2-charts';
 })
 export class LivemapComponent implements OnInit {
 
+  Employee:any = [];
+
   project1: any;
   tool: any;
   route: string;
 
-  constructor() { }
+  constructor(private apiService: ApiService) {
+    this.readEmployee();
+   }
 
   ngOnInit() {
 
@@ -113,6 +118,13 @@ export class LivemapComponent implements OnInit {
     path7.strokeColor = new Color('black');
     path7.fillColor = new Color('white');
 
+  }
+
+
+  readEmployee(){
+    this.apiService.getEmployees().subscribe((data) => {
+      this.Employee = data;
+     })
   }
 
 }

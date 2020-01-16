@@ -28,16 +28,18 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 // Import charts
 import { ChartsModule } from 'ng2-charts';
 
-// used to create fake backend
+// BACKEND
 import { fakeBackendProvider } from './_helpers';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { ApiService } from './_services/api.service';
 
 
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LivemapComponent } from './livemap/livemap.component';  
+
 
 @NgModule({
   declarations: [
@@ -78,7 +80,8 @@ import { LivemapComponent } from './livemap/livemap.component';
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     
     //provider used to create fake backend
-    fakeBackendProvider
+    fakeBackendProvider,
+    ApiService
   ],
   bootstrap: [AppComponent]
 })

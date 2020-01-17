@@ -19,6 +19,26 @@ export class ApiService {
         return this.http.get(`${this.baseUri}/employees`);
     }
 
+    /**
+     * get("/api/locate")
+     * @param name of the person you're trying to locate in the daycare
+     */
+    locatePerson(name): Observable<any> {
+        let url = `${this.baseUri}/locate`;
+        return this.http.get(url, {params:{staff_id: name}}).pipe(
+            map((res: Response) => {
+                return res || {}
+            }),
+            catchError(this.errorMgmt)
+        )
+    }
+
+
+
+
+
+
+
 
     // Error handling 
     errorMgmt(error: HttpErrorResponse) {

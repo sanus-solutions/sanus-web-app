@@ -1,11 +1,15 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, ChangeDetectorRef, ChangeDetectionStrategy, Input, SimpleChanges, NgZone } from '@angular/core';
 import { Color, Project, Path, Point, Layer, Size, Rectangle, Event, Segment, Tool, PointText } from 'paper';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { ApiService } from './../_services/api.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 import * as paper from 'paper';
 import { Tooltip } from 'chart.js';
 import { defaultColors } from 'ng2-charts';
+import { ThrowStmt } from '@angular/compiler';
+import { VirtualTimeScheduler, Observable, interval, Subscription } from 'rxjs';
+import { Employee } from '../model/employee';
 
 
 @Component({
@@ -15,19 +19,33 @@ import { defaultColors } from 'ng2-charts';
 })
 export class LivemapComponent implements OnInit {
 
+  Room: string = "";
+  showRoomCard: boolean = false;
+
   Employee:any = [];
+  CurrentRoom:any;
+  CurrentRoomPeopleList: any;
+  LastLocations:any = [];
 
-  project1: any;
-  tool: any;
-  route: string;
+  //subscriptions
+  subscriptionToLocations: Subscription;
 
-  constructor(private apiService: ApiService) {
+  constructor(private apiService: ApiService, private _snackBar: MatSnackBar, private elementRef: ElementRef) {
     this.readEmployee();
-   }
+    this.LastLocations = new Array();
+    this.CurrentRoom = null;
+    this.CurrentRoomPeopleList = new Array();
+    
+  }
 
   ngOnInit() {
 
-    const project1 = new Project('cv1');
+    //interval task (auto refresh page every 30 secs)
+    const source = interval(30000);
+    this.subscriptionToLocations = source.subscribe(val => this.refreshMap());
+    
+
+    var project1 = new Project('cv1');
     var tool = new Tool();
 
     this.createDaycareLayout();
@@ -40,12 +58,9 @@ export class LivemapComponent implements OnInit {
     }
 
     // init some vars
-    var segment;
     var path;
-    var movePath = false;
 
-    tool.onMouseDown = function(event) {
-      segment = null;
+    tool.onMouseDown = (event) => {
       path = null;
       var hitResult = project1.hitTest(event.point, hitOptions);
       if(!hitResult) {
@@ -54,23 +69,25 @@ export class LivemapComponent implements OnInit {
 
       if(hitResult) {
         path = hitResult.item;
-        if(hitResult.type = 'segment') {
-          segment = hitResult.segment;
-        } else if (hitResult.type == 'stroke') {
-          var location = hitResult.location;
-			    segment = path.insert(location.index + 1, event.point);
-			    path.smooth();
-        }
-      }
 
-      movePath = hitResult.type == 'fill';
-      if(movePath) {
-        project1.activeLayer.addChild(hitResult.item);
+        this.Room = "Room " + path.data.nodeID;
+        this.CurrentRoom = path.data.nodeID;
+        this.CurrentRoomPeopleList = new Array();
+
+        // loop through the last locations array to find anyone with the same node_id
+        for (var person of this.LastLocations) {
+          if(person.nodeID == this.CurrentRoom) {
+            this.CurrentRoomPeopleList.push(person);
+          }
+        }
+
+        this.showRoomCard = true;
+       
       }
       
     }
 
-    tool.onMouseMove = function(event) {
+    tool.onMouseMove = (event) => {
       project1.activeLayer.selected = false;
       if(event.item) {
         event.item.selected = true;
@@ -81,50 +98,177 @@ export class LivemapComponent implements OnInit {
   }
 
   createDaycareLayout() {
-    var point1 = new Point(400,400);
-    var point2 = new Point(500,400);
-    var point3 = new Point(400,500);
-    var point4 = new Point(500,500);
-    var point5 = new Point(600,500);
-    var point6 = new Point(500,600);
-    var point7 = new Point(700,700);
-    var roomSize = new Size(100,100);
+    var point1 = new Point(300,100);
+    var point2 = new Point(300,250);
+    var point3 = new Point(450,250);
+    var point4 = new Point(450,100);
 
-    var path1 = new Path.Rectangle(point1, roomSize);
-    path1.strokeColor = new Color('red');
-    path1.fillColor = new Color('white');
+    var point5 = new Point(450,400);
 
-    var path2 = new Path.Rectangle(point2, roomSize);
-    path2.strokeColor = new Color('black');
-    path2.fillColor = new Color('white');
+    var point6 = new Point(600,650);
+    var point7 = new Point(750,600);
 
-    var path3 = new Path.Rectangle(point3, roomSize);
-    path3.strokeColor = new Color('green');
-    path3.fillColor = new Color('white');
+    var roomSize = new Size(150,150);
+    var hallwaySize = new Size(150,400);
 
-    var path4 = new Path.Rectangle(point4, roomSize);
-    path4.strokeColor = new Color('black');
-    path4.fillColor = new Color('white');
+    var room1 = new Path.Rectangle(point1, roomSize);
+    room1.strokeColor = new Color('green');
+    room1.fillColor = new Color('white');
+    room1.data.nodeID = "1";
 
-    var path5 = new Path.Rectangle(point5, roomSize);
-    path5.strokeColor = new Color('red');
-    path5.fillColor = new Color('white');
+    var room2 = new Path.Rectangle(point2, roomSize);
+    room2.strokeColor = new Color('green');
+    room2.fillColor = new Color('white');
+    room2.data.nodeID = "2";
 
-    var path6 = new Path.Rectangle(point6, roomSize);
-    path6.strokeColor = new Color('blue');
-    path6.fillColor = new Color('white');
+    var room3 = new Path.Rectangle(point3, roomSize);
+    room3.strokeColor = new Color('green');
+    room3.fillColor = new Color('white');
+    room3.data.nodeID = "3";
 
-    var path7 = new Path.Rectangle(point7, roomSize);
-    path7.strokeColor = new Color('black');
-    path7.fillColor = new Color('white');
+    var room4 = new Path.Rectangle(point4, roomSize);
+    room4.strokeColor = new Color('green');
+    room4.fillColor = new Color('white');
+    room4.data.nodeID = "4";
+
+    var room5 = new Path.Rectangle(point5, hallwaySize);
+    room5.strokeColor = new Color('blue');
+    room5.fillColor = new Color('white');
+    room5.data.nodeID = "5";
+
+    var room6 = new Path.Rectangle(point6, roomSize);
+    room6.strokeColor = new Color('green');
+    room6.fillColor = new Color('white');
+    room6.data.nodeID = "6";
+
+    var room7 = new Path.Rectangle(point7, roomSize);
+    room7.strokeColor = new Color('green');
+    room7.fillColor = new Color('white');
+    room7.data.nodeID = "7";
+
+    var text1 = new PointText({
+      point: [350,120],
+      content: 'Room 1',
+      fillColor: 'black',
+      fontFamily: 'sans-serif',
+      fontWeight: 'bold',
+      fontSize: 15
+    });
+
+    var text2 = new PointText({
+      point: [500,120],
+      content: 'Room 2',
+      fillColor: 'black',
+      fontFamily: 'sans-serif',
+      fontWeight: 'bold',
+      fontSize: 15
+    });
+
+    var text3 = new PointText({
+      point: [500,270],
+      content: 'Room 3',
+      fillColor: 'black',
+      fontFamily: 'sans-serif',
+      fontWeight: 'bold',
+      fontSize: 15
+    });
+
+    var text3 = new PointText({
+      point: [500,270],
+      content: 'Room 3',
+      fillColor: 'black',
+      fontFamily: 'sans-serif',
+      fontWeight: 'bold',
+      fontSize: 15
+    });
+
+    var text4 = new PointText({
+      point: [350,270],
+      content: 'Room 4',
+      fillColor: 'black',
+      fontFamily: 'sans-serif',
+      fontWeight: 'bold',
+      fontSize: 15
+    });
+
+    var text5 = new PointText({
+      point: [490,570],
+      content: 'Hallway 1',
+      fillColor: 'black',
+      fontFamily: 'sans-serif',
+      fontWeight: 'bold',
+      fontSize: 15
+    });
+
+    var text6 = new PointText({
+      point: [650,670],
+      content: 'Room 6',
+      fillColor: 'black',
+      fontFamily: 'sans-serif',
+      fontWeight: 'bold',
+      fontSize: 15
+    });
+
+    var text7 = new PointText({
+      point: [800,620],
+      content: 'Room 7',
+      fillColor: 'black',
+      fontFamily: 'sans-serif',
+      fontWeight: 'bold',
+      fontSize: 15
+    });
 
   }
-
 
   readEmployee(){
     this.apiService.getEmployees().subscribe((data) => {
       this.Employee = data;
      })
   }
+
+  refreshMap() {
+    this.LastLocations = new Array();
+    this.Employee.forEach(element => {
+        this.locatePerson(element.name);
+    });
+    this.openSnackBar("Refreshing Map", "Dismiss");
+  }
+
+  firstMapRefresh() {
+    this.LastLocations = new Array();
+    this.Employee.forEach(element => {
+        this.locatePerson(element.name);
+    });
+    this.openSnackBar("Refreshing Map", "Dismiss");
+  }
+
+  locatePerson(name) {
+    this.apiService.locatePerson(name).subscribe((data) => {
+      if(data.staff_id != undefined){
+        var person = {name: data.staff_id, title: data.staff_title, nodeID: data.node_id};
+        this.LastLocations.push(person);
+      }
+    })
+  }
+
+  // SnackBar
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
+
+  // Reload page since paperjs and angular routing bug when moving back and forth between router
+  refresh(): void {
+    window.location.reload();
+  }
+
+
+  // On Destroy
+  ngOnDestroy() {
+    this.subscriptionToLocations.unsubscribe();
+    this.elementRef.nativeElement.remove();
+  }
+
 
 }

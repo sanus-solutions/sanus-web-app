@@ -4,7 +4,9 @@ var mongodb = require("mongodb");
 var cors = require('cors');
 var ObjectID = mongodb.ObjectID;
 
-var KRK_COLLECTION = "kidsrkids";
+var EMPLOYEES_COLLECTION = "employees";
+var CAMERAS_COLLECTION = "cameras";
+var MAP_COLLECTION = "map";
 
 var app = express();
 app.use(bodyParser.json());
@@ -43,11 +45,26 @@ function handleError(res, reason, message, code) {
  *    GET: finds all employees
  */
 app.get("/api/employees", function(req, res) {
-    db.collection(KRK_COLLECTION).find({}).toArray(function(err, docs) {
+    db.collection(EMPLOYEES_COLLECTION).find({}).toArray(function(err, docs) {
         if (err) {
           handleError(res, err.message, "Failed to get employees.");
         } else {
           res.status(200).json(docs);
         }
     });
+});
+
+/*  "/api/locate"
+ *   GET: locate last room person was inside by name
+ *   Params: staff_id (aka name)
+ */
+
+app.get("/api/locate", function(req, res) {
+  db.collection(MAP_COLLECTION).findOne({ staff_id: req.query.staff_id }, {sort:{$natural:-1}}, function(err, doc) {
+    if (err) {
+      handleError(res, err.message, "Failed to get contact");
+    } else {
+      res.status(200).json(doc);
+    }
+  });
 });

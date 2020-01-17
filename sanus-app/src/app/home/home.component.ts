@@ -23,6 +23,13 @@ export class HomeComponent implements OnInit {
 
 	}
 
+	goToLiveMap() {
+		this.router.navigateByUrl('/livemap', { skipLocationChange: false }).then(() => {
+			this.router.navigate(['/livemap']);
+			window.location.reload();
+		}); 
+	}
+
 	logout() {
         this.authenticationService.logout();
         this.router.navigate(['/login']);

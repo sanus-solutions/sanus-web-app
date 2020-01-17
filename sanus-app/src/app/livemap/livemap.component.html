@@ -1,6 +1,38 @@
 <div class="livemap-main-container">
 
-  <button (click)="refreshMap()" class="refresh-button" mat-raised-button color="primary">Refresh Map</button>
+  <button (click)="refreshMap()" class="refresh-button" mat-raised-button color="primary">
+    <mat-icon>refresh</mat-icon>
+    Refresh Map
+  </button>
+
+
+
+  <mat-card class="legend-card">
+    <mat-card-header>
+    <mat-card-title>Map Legend</mat-card-title>
+      <mat-card-subtitle>Types of People</mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>
+          <mat-icon class="legend-icons" [ngStyle]="{'color':'green'}" aria-label="Staff Member">person</mat-icon>
+          <span class="spacer"></span>
+          Staff Member
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon class="legend-icons" [ngStyle]="{'color':'blue'}" aria-label="Student/Child">child_care</mat-icon>
+          <span class="spacer"></span>
+          Student/Child
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon class="legend-icons" [ngStyle]="{'color':'red'}" aria-label="Unknown Person">warning</mat-icon>
+          <span class="spacer"></span>
+          Unknown Person
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
 
     <mat-card *ngIf="showRoomCard" class="overview-profile-card overview-card">
         <mat-card-header>
@@ -9,11 +41,17 @@
         </mat-card-header>
         <mat-divider></mat-divider>
         <mat-card-content>
+          <mat-list *ngIf="CurrentRoomPeopleList.length == 0">
+            <mat-list-item>
+              This room is currently empty.
+            </mat-list-item>
+          </mat-list>
           <mat-list *ngFor="let person of CurrentRoomPeopleList; let i = index">
               <mat-list-item>
                 {{person.name}}
-                <mat-icon *ngIf="person.title == 'admin'" aria-label="Admin">person</mat-icon>
-                <mat-icon *ngIf="person.title == 'student'" aria-label="Student">child_care</mat-icon>
+                <mat-icon *ngIf="person.title == 'admin'" aria-label="Admin" [ngStyle]="{'color':'green'}">person</mat-icon>
+                <mat-icon *ngIf="person.title == 'student'" aria-label="Student" [ngStyle]="{'color':'blue'}">child_care</mat-icon>
+                <mat-icon *ngIf="person.title == 'unknown'" aria-label="Unknown" [ngStyle]="{'color':'blue'}">warning</mat-icon>
               </mat-list-item>
               <!-- <img mat-card-image src="../../assets/steph.jpg" alt="ID Photo"> --> 
           </mat-list>

@@ -5,6 +5,7 @@
 * Implement Last Seen timestamp when a user clicks on a "room"
 * Make sure node server can run without MongoDB Running
 * Add in better login/user personalization 
+* Add in a new API route to get the number of "rooms" so that map creation is dynamic instead of hardcoded
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.

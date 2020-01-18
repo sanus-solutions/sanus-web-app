@@ -1,5 +1,12 @@
 # SanusApp
 
+## TODO
+* Redo the entire schema design to make it more relatable to a daycare environment (not enough time atm to complete this)
+* Implement Last Seen timestamp when a user clicks on a "room"
+* Make sure node server can run without MongoDB Running
+* Add in better login/user personalization 
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
 ## Development server

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import * as pluginDataLabels from 'chart.js';
 import { Label } from 'ng2-charts';
+import { ApiService } from '../_services/api.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -32,10 +33,44 @@ export class LandingPageComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  public today:any;
+  public totalPeople:any;
+  Employee: any = [];
+  disabledFor: string;
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+
+    this.initCurrentDate();
+    this.getPeopleBeingMonitored();
+    this.disabledFor = "CUSTOM DATA ADDED HERE UPON REQUEST";
+
+
   }
+
+
+  // init date in the manager card
+  initCurrentDate() {
+    // init the date in the manager card
+    this.today = new Date();
+    var dd = String(this.today.getDate()).padStart(2, '0');
+    var mm = String(this.today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = this.today.getFullYear();
+
+    this.today = mm + '/' + dd + '/' + yyyy;
+  }
+
+  getPeopleBeingMonitored(){
+    this.apiService.getEmployees().subscribe((data) => {
+      this.Employee = data;
+      this.totalPeople = this.Employee.length;
+     })
+  }
+
+
+
+
 
 
   // events

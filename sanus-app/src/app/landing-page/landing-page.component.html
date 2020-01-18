@@ -3,36 +3,23 @@
 	<div class="dashboard-overview">
 		<mat-card class="overview-profile-card overview-card">
 		  <mat-card-header>
-		    <mat-card-title>Stephanie</mat-card-title>
+		    <mat-card-title>Jay Bryan</mat-card-title>
 		    <mat-card-subtitle>Manager</mat-card-subtitle>
 		  </mat-card-header>
-		  <img mat-card-image src="../../assets/steph.jpg" alt="ID Photo">
+		  <img mat-card-image src="../../assets/jay_bryan.jpg" alt="ID Photo">
 		  <mat-divider></mat-divider>
 		  <mat-card-content>
 		    <mat-list>
-				<mat-list-item> January 5, 2018 - 5:00PM - Alert given for non-compliance </mat-list-item>
-				<mat-list-item> January 5, 2018 - 7:34PM - Student "Luka" Missing </mat-list-item>
-				<mat-list-item> January 5, 2018 - 9:00PM - System Offline </mat-list-item>
+				<mat-list-item> {{today}} - System Online </mat-list-item>
 			</mat-list>
 		  </mat-card-content>
 		</mat-card>
 		<mat-card class="overview-chart-card overview-card">
 			<mat-card-header>
-			  <mat-card-title>Attendance Rate</mat-card-title>
+			  <mat-card-title>Total Users on System</mat-card-title>
 			</mat-card-header>
-			<circle-progress class="progess-circle"
-				[percent]="80"
-				[radius]="50"
-				[outerStrokeWidth]="16"
-				[innerStrokeWidth]="0"
-				[outerStrokeColor]="'#0000FF'"
-				[innerStrokeColor]="'#C7E596'"
-				[animation]="true"
-				[animationDuration]="300"
-				[showSubtitle]="false"
-				></circle-progress>
-			<mat-card-content>
-			  <span>4% Increase in Last Week</span>
+			<mat-card-content>	
+			  <span class="total-monitored-card">{{totalPeople}}</span>
 			</mat-card-content>
 		</mat-card>
 		<mat-card class="overview-chart-card overview-card">
@@ -51,7 +38,7 @@
 				[showSubtitle]="false"
 				></circle-progress>
 			<mat-card-content>
-			  <span>20% Decrease in Last Week</span>
+			  <span>{{disabledFor}}</span>
 			</mat-card-content>
 		</mat-card>
 		<mat-card class="overview-chart-card overview-card">
@@ -70,31 +57,12 @@
 				[showSubtitle]="false"
 				></circle-progress>
 			<mat-card-content>
-			  <span>0% Change in Last Week</span>
-			</mat-card-content>
-		</mat-card>
-		<mat-card class="overview-graph-card overview-card">
-			<mat-card-header>
-			  <mat-card-title>Detection Rate</mat-card-title>
-			</mat-card-header>
-			<circle-progress class="progess-circle"
-				[percent]="100"
-				[radius]="50"
-				[outerStrokeWidth]="16"
-				[innerStrokeWidth]="0"
-				[outerStrokeColor]="'#00FF00'"
-				[innerStrokeColor]="'#C7E596'"
-				[animation]="true"
-				[animationDuration]="300"
-				[showSubtitle]="false"
-				></circle-progress>
-			<mat-card-content>
-			  <span>0% Change in Last Week</span>
+			  <span>{{disabledFor}}</span>
 			</mat-card-content>
 		</mat-card>
 		<mat-card class="overview-graph-card overview-card overview-main-charts">
 			<mat-card-header>
-			  <mat-card-title>Charts and Graphs</mat-card-title>
+			  <mat-card-title>{{disabledFor}}</mat-card-title>
 			</mat-card-header>
 			<mat-card-content>
 				<canvas baseChart

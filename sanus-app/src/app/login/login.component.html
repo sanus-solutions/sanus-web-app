@@ -1,8 +1,11 @@
 <div class="login-main-container">
 
+	<img class="logo" src="assets/logo.png" alt="image">
+
 	<div class="center-card">
 		<mat-card class="login-card">
 		  <mat-card-title>Login</mat-card-title>
+		  <mat-card-subtitle>Sanus Solutions Monitoring System</mat-card-subtitle>
 		  <mat-card-content>
 
 				<form [formGroup]="loginForm" id="ngForm" (ngSubmit)="onSubmit()" class="login-form">
@@ -36,8 +39,8 @@
 
 		  </mat-card-content>
 		  <mat-card-actions>
-		    <button [disabled]="loading" mat-button form="ngForm">LOGIN</button>
-		    <button mat-button>FORGOT?</button>
+		    <button [disabled]="loading" mat-raised-button color="primary" form="ngForm">LOGIN</button>
+		    <!-- <button mat-button>FORGOT?</button> -->
 		  </mat-card-actions>
 		</mat-card>
 	</div>

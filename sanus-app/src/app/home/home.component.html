@@ -15,14 +15,14 @@
 	<div class="padded-right"></div>
 
 	<div class="user-profile">
-		<img src="assets/steph.jpg">
+		<img src="assets/jay_bryan.jpg">
 	</div>
 
 	<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Settings">
 	  <mat-icon>arrow_drop_down</mat-icon>
 	</button>
 	<mat-menu #menu="matMenu">
-	  <button mat-menu-item>
+	  <button disabled mat-menu-item>
 	    <mat-icon>person</mat-icon>
 	    <span>Edit Profile</span>
 	  </button>
@@ -60,7 +60,7 @@
 			<mat-divider></mat-divider>
 			<h3 mat-subheader>Settings</h3>
 			<mat-list-item>
-				<button mat-icon-button>
+				<button disabled mat-icon-button>
 			    	<mat-icon>face</mat-icon>
 			    	<span>Face Settings</span>
 				</button>

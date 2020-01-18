@@ -52,8 +52,6 @@ export class LivemapComponent implements OnInit {
 
     this.createDaycareLayout();
 
-    console.log(paper.project.layers);
-
     var hitOptions = {
       segments: true,
       stroke: true,
@@ -187,6 +185,9 @@ export class LivemapComponent implements OnInit {
     }
   }
 
+  /**
+   * Modify this function whenever there is a new change to the room layout of the Daycare
+   */
   createDaycareLayout() {
     var point1 = new Point(400,100);
     var point2 = new Point(400,250);
@@ -270,7 +271,7 @@ export class LivemapComponent implements OnInit {
     });
 
     var text2 = new PointText({
-      point: [600,120],
+      point: [450,270],
       content: 'Room 2',
       fillColor: 'black',
       fontFamily: 'sans-serif',
@@ -290,7 +291,7 @@ export class LivemapComponent implements OnInit {
     });
 
     var text4 = new PointText({
-      point: [450,270],
+      point: [600,120],
       content: 'Room 4',
       fillColor: 'black',
       fontFamily: 'sans-serif',

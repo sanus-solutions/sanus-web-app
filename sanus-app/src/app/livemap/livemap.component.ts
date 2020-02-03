@@ -3,6 +3,7 @@ import { Color, Project, Path, Point, Layer, Size, Rectangle, Event, Segment, To
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { ApiService } from './../_services/api.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {SharedataService} from "./../_services/sharedata.service";
 
 import * as paper from 'paper';
 import { Tooltip } from 'chart.js';
@@ -27,11 +28,12 @@ export class LivemapComponent implements OnInit {
   CurrentRoomPeopleList: any;
   RoomList:any;
   LastLocations:any = [];
+  message:any;
 
   //subscriptions
   subscriptionToLocations: Subscription;
 
-  constructor(private apiService: ApiService, private _snackBar: MatSnackBar, private elementRef: ElementRef) {
+  constructor(private apiService: ApiService, private _snackBar: MatSnackBar, private elementRef: ElementRef, private data: SharedataService) {
     this.readEmployee();
     this.LastLocations = new Array();
     this.CurrentRoom = null;
@@ -41,7 +43,10 @@ export class LivemapComponent implements OnInit {
   }
 
   ngOnInit() {
+    // subscribers
+    this.data.currentMessage.subscribe(message => this.message = message);
 
+  
     //interval task (auto refresh page every 30 secs)
     const source = interval(30000);
     this.subscriptionToLocations = source.subscribe(val => this.refreshMap());
@@ -63,6 +68,7 @@ export class LivemapComponent implements OnInit {
     var path;
 
     tool.onMouseDown = (event) => {
+
       path = null;
       var hitResult = project1.hitTest(event.point, hitOptions);
       if(!hitResult) {
@@ -72,7 +78,12 @@ export class LivemapComponent implements OnInit {
       if(hitResult) {
         path = hitResult.item;
 
-        this.Room = "Room " + path.data.nodeID;
+        // find the room name for that particular nodeID
+        this.RoomList.forEach(element => {
+          if(element.nodeID == path.data.nodeID) {
+            this.Room = element.roomName;
+          }
+        });
         this.CurrentRoom = path.data.nodeID;
         this.CurrentRoomPeopleList = new Array();
 
@@ -189,15 +200,8 @@ export class LivemapComponent implements OnInit {
    * Modify this function whenever there is a new change to the room layout of the Daycare
    */
   createDaycareLayout() {
-    var point1 = new Point(400,100);
-    var point2 = new Point(400,250);
-    var point3 = new Point(550,250);
-    var point4 = new Point(550,100);
-
-    var point5 = new Point(550,400);
-
-    var point6 = new Point(700,650);
-    var point7 = new Point(850,600);
+    var point1 = new Point(450,200);
+    var point5 = new Point(600,200);
 
     var roomSize = new Size(150,150);
     var hallwaySize = new Size(150,400);
@@ -209,31 +213,7 @@ export class LivemapComponent implements OnInit {
     room1.strokeWidth = 5;
     room1.fillColor = new Color('white');
     room1.data.nodeID = "1";
-    room = {nodeID: room1.data.nodeID, startPoint: point1, roomSize: roomSize, numOfStaff: 0, numOfChildren: 0, numOfUnknown: 0};
-    this.RoomList.push(room);
-
-    var room2 = new Path.Rectangle(point2, roomSize);
-    room2.strokeColor = new Color('#3F51B5');
-    room2.strokeWidth = 5;
-    room2.fillColor = new Color('white');
-    room2.data.nodeID = "2";
-    room = {nodeID: room2.data.nodeID, startPoint: point2, roomSize: roomSize, numOfStaff: 0, numOfChildren: 0, numOfUnknown: 0};
-    this.RoomList.push(room);
-
-    var room3 = new Path.Rectangle(point3, roomSize);
-    room3.strokeColor = new Color('#3F51B5');
-    room3.strokeWidth = 5;
-    room3.fillColor = new Color('white');
-    room3.data.nodeID = "3";
-    room = {nodeID: room3.data.nodeID, startPoint: point3, roomSize: roomSize, numOfStaff: 0, numOfChildren: 0, numOfUnknown: 0};
-    this.RoomList.push(room);
-
-    var room4 = new Path.Rectangle(point4, roomSize);
-    room4.strokeColor = new Color('#3F51B5');
-    room4.strokeWidth = 5;
-    room4.fillColor = new Color('white');
-    room4.data.nodeID = "4";
-    room = {nodeID: room4.data.nodeID, startPoint: point4, roomSize: roomSize, numOfStaff: 0, numOfChildren: 0, numOfUnknown: 0};
+    room = {nodeID: room1.data.nodeID, startPoint: point1, roomSize: roomSize, numOfStaff: 0, numOfChildren: 0, numOfUnknown: 0, roomName: "Children's Room"};
     this.RoomList.push(room);
 
     var room5 = new Path.Rectangle(point5, hallwaySize);
@@ -241,58 +221,12 @@ export class LivemapComponent implements OnInit {
     room5.strokeWidth = 5;
     room5.fillColor = new Color('white');
     room5.data.nodeID = "5";
-    room = {nodeID: room5.data.nodeID, startPoint: point5, roomSize: hallwaySize, numOfStaff: 0, numOfChildren: 0, numOfUnknown: 0};
-    this.RoomList.push(room);
-
-    var room6 = new Path.Rectangle(point6, roomSize);
-    room6.strokeColor = new Color('#3F51B5');
-    room6.strokeWidth = 5;
-    room6.fillColor = new Color('white');
-    room6.data.nodeID = "6";
-    room = {nodeID: room6.data.nodeID, startPoint: point6, roomSize: roomSize, numOfStaff: 0, numOfChildren: 0, numOfUnknown: 0};
-    this.RoomList.push(room);
-
-    var room7 = new Path.Rectangle(point7, roomSize);
-    room7.strokeColor = new Color('#3F51B5');
-    room7.strokeWidth = 5;
-    room7.fillColor = new Color('white');
-    room7.data.nodeID = "7";
-    room = {nodeID: room7.data.nodeID, startPoint: point7, roomSize: roomSize, numOfStaff: 0, numOfChildren: 0, numOfUnknown: 0};
+    room = {nodeID: room5.data.nodeID, startPoint: point5, roomSize: hallwaySize, numOfStaff: 0, numOfChildren: 0, numOfUnknown: 0, roomName: "Hallway"};
     this.RoomList.push(room);
 
     var text1 = new PointText({
-      point: [450,120],
-      content: 'Room 1',
-      fillColor: 'black',
-      fontFamily: 'sans-serif',
-      fontWeight: 'bold',
-      fontSize: 15,
-      locked: true
-    });
-
-    var text2 = new PointText({
-      point: [450,270],
-      content: 'Room 2',
-      fillColor: 'black',
-      fontFamily: 'sans-serif',
-      fontWeight: 'bold',
-      fontSize: 15,
-      locked: true
-    });
-
-    var text3 = new PointText({
-      point: [600,270],
-      content: 'Room 3',
-      fillColor: 'black',
-      fontFamily: 'sans-serif',
-      fontWeight: 'bold',
-      fontSize: 15,
-      locked: true
-    });
-
-    var text4 = new PointText({
-      point: [600,120],
-      content: 'Room 4',
+      point: [470,220],
+      content: 'Childrens Room',
       fillColor: 'black',
       fontFamily: 'sans-serif',
       fontWeight: 'bold',
@@ -301,28 +235,8 @@ export class LivemapComponent implements OnInit {
     });
 
     var text5 = new PointText({
-      point: [590,570],
-      content: 'Hallway 1',
-      fillColor: 'black',
-      fontFamily: 'sans-serif',
-      fontWeight: 'bold',
-      fontSize: 15,
-      locked: true
-    });
-
-    var text6 = new PointText({
-      point: [750,670],
-      content: 'Room 6',
-      fillColor: 'black',
-      fontFamily: 'sans-serif',
-      fontWeight: 'bold',
-      fontSize: 15,
-      locked: true
-    });
-
-    var text7 = new PointText({
-      point: [900,620],
-      content: 'Room 7',
+      point: [650,400],
+      content: 'Hallway',
       fillColor: 'black',
       fontFamily: 'sans-serif',
       fontWeight: 'bold',
@@ -340,6 +254,7 @@ export class LivemapComponent implements OnInit {
 
   refreshMap() {
     this.clearAndRefreshCountInRooms()
+    this.showRoomCard = false;
     this.LastLocations = new Array();
     this.Employee.forEach(element => {
         this.locatePerson(element.name);
@@ -367,6 +282,28 @@ export class LivemapComponent implements OnInit {
     }
   }
 
+  /**
+   * Check the room counts and see if there are any out of "ratio"
+   * If OUT OF RATIO, send alert event to the Database for that particular account.
+   * MUST BE CALLED AFTER incrementRoomCount() for accurate data
+   * @param None
+   */
+  checkIfOutOfRatio() {
+    for (var room of this.RoomList) {
+      
+      // for each room, look at the admin to student ratio. MUST BE 1:10 at least.
+      if((room.numOfChildren / room.numOfStaff) > 10) {
+        // send out an alert
+        this.sendOutOfRatioAlert(room);
+        return;
+      } else {
+        this.data.changeMessage("No Alerts");
+        return;
+      }
+
+    }
+  }
+
   locatePerson(name) {
     this.apiService.locatePerson(name).subscribe((data) => {
       if(data.staff_id != undefined){
@@ -377,6 +314,9 @@ export class LivemapComponent implements OnInit {
         this.incrementRoomCount(person);
         this.drawPeopleOnMap();
 
+        // Check if out of ratio
+        this.checkIfOutOfRatio();
+
       }
     })
   }
@@ -386,6 +326,16 @@ export class LivemapComponent implements OnInit {
     this._snackBar.open(message, action, {
       duration: 2000,
     });
+  }
+
+  // Send an alert for OUT OF RATIO'
+  sendOutOfRatioAlert(room) {
+    this.data.changeMessage(room.roomName.toString() + " is out of ratio. Please check on the room and staff.");
+  }
+
+  // Change the message in the Shared Message Service
+  newMessage() {
+    this.data.changeMessage("Hello from Sibling");
   }
 
   // Reload page since paperjs and angular routing bug when moving back and forth between router

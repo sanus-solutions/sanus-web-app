@@ -8,9 +8,12 @@
 	<!-- This fills the remaining space of the current row -->
 	<span class="fill-remaining-space"></span>
 
-	<button mat-icon-button aria-label="Alerts">
-	  <mat-icon>notifications</mat-icon>
+	<button mat-icon-button aria-label="Alerts" [matMenuTriggerFor]="alertMenu">
+	  <mat-icon matBadge="!" matBadgeColor="warn" [matBadgeHidden]="message=='No Alerts'">notifications</mat-icon>
 	</button>
+	<mat-menu #alertMenu="matMenu">
+		<button mat-menu-item>{{message}}</button>
+	</mat-menu>
 
 	<div class="padded-right"></div>
 

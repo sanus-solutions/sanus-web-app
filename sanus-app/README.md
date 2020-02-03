@@ -1,11 +1,31 @@
 # SanusApp
 
 ## TODO
+* Add in alerts for out of ratio. I will do 2 teachers for every 5 kids right now.
+
+### Less Important TODOS
 * Redo the entire schema design to make it more relatable to a daycare environment (not enough time atm to complete this)
 * Implement Last Seen timestamp when a user clicks on a "room"
 * Make sure node server can run without MongoDB Running
 * Add in better login/user personalization 
 * Add in a new API route to get the number of "rooms" so that map creation is dynamic instead of hardcoded
+* Add RESET button for MongoDB
+
+
+
+
+## MongoDB
+Currently, the database is split into 3 parts.
+
+`db.employees`
+`db.map`
+`db.cameras`
+`db.account`
+
+### Account
+`account.[name].[alerts]`
+
+
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.

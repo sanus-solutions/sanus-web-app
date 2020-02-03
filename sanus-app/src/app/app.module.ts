@@ -20,6 +20,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatDialogModule} from '@angular/material/dialog';
 /*                          */
 
 // Import ng-circle-progress
@@ -73,7 +75,9 @@ import { LivemapComponent } from './livemap/livemap.component';
       // set defaults here
       radius: 50
     }),
-    ChartsModule
+    ChartsModule,
+    MatBadgeModule,
+    MatDialogModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

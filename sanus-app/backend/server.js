@@ -16,7 +16,7 @@ app.use(cors());
 var db;
 
 // Connect to the database before starting the application server.
-mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://192.168.1.72:27017/daycares", function (err, client) {
+mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://192.168.1.3:27017/daycares", function (err, client) {
   if (err) {
     console.log(err);
     process.exit(1);

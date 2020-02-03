@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
     returnUrl: string;
     error: string;
     success: string;
+    hide: boolean = false;
 
 	emailFormControl = new FormControl('', [
 	    Validators.required,

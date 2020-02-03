@@ -48,7 +48,7 @@ export class LivemapComponent implements OnInit {
 
   
     //interval task (auto refresh page every 30 secs)
-    const source = interval(30000);
+    const source = interval(10000);
     this.subscriptionToLocations = source.subscribe(val => this.refreshMap());
     
 
@@ -254,7 +254,6 @@ export class LivemapComponent implements OnInit {
 
   refreshMap() {
     this.clearAndRefreshCountInRooms()
-    this.showRoomCard = false;
     this.LastLocations = new Array();
     this.Employee.forEach(element => {
         this.locatePerson(element.name);
@@ -304,6 +303,22 @@ export class LivemapComponent implements OnInit {
     }
   }
 
+  /**
+   * Reloads the room card to the left of the live map if it is selected already.
+   * 
+   */
+  reloadSelectedRoomCard() {
+    if(this.showRoomCard) {
+      this.CurrentRoomPeopleList = new Array();
+      // loop through the last locations array to find anyone with the same node_id
+      for (var person of this.LastLocations) {
+        if(person.nodeID == this.CurrentRoom) {
+          this.CurrentRoomPeopleList.push(person);
+        }
+      }
+    }
+  }
+
   locatePerson(name) {
     this.apiService.locatePerson(name).subscribe((data) => {
       if(data.staff_id != undefined){
@@ -313,6 +328,8 @@ export class LivemapComponent implements OnInit {
         // increment the RoomList with knowledge of this person
         this.incrementRoomCount(person);
         this.drawPeopleOnMap();
+
+        this.reloadSelectedRoomCard();
 
         // Check if out of ratio
         this.checkIfOutOfRatio();
